@@ -25,18 +25,51 @@
         </div>
     </header>
 <!---Header area end--->
-<div class="alert-message" style="width: fit-content;position: fixed;top: 100px;left:1.5rem;">
+
+<!---Alert system start--->
+<div class="alert-message">
 <?php
     if(isset($_GET['result'])){
 		if($_GET['result'] == 'blank'){
-			echo '<span style="color:#2c3e50;background:#bdc3c7;padding:10px;text-align:center;font-size: 0.8rem;">&#10526; Fill all input</span>';
+			echo '<span class="hide-alert">&#10526; Fill all input</span>';
 		}elseif($_GET['result'] == 'not-match'){
-			echo '<span style="color:white;background:#2c3e50;padding:10px;text-align:center;font-size: 0.8rem;">&#10526; Check email</span>';
+			echo '<span class="hide-alert">&#10526; Check email</span>';
 		}if($_GET['result'] == 'exist'){
-			echo '<span style="color:white;background:#e74c3c;padding:10px;text-align:center;font-size: 0.8rem;">&#10526; Already have an account</span>';
+			echo '<span class="hide-alert">&#10526; Already have an account</span>';
 		}if($_GET['result'] == 'successful'){
-			echo '<span style="color:#2c3e50;background:green;padding:10px;text-align:center;font-size: 0.8rem;">&#10526; Welcome to Codebook</span>';
+			echo '<span class="hide-alert">&#10526; Welcome to Codebook</span>';
 		}
 	}
 ?>
 </div>
+<style>
+.alert-message{
+  width: fit-content;
+  position: fixed;
+  top: 100px;
+  left: 1.5rem;
+}
+.alert-message span{
+  padding: 10px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: white;
+  background: #27ae60;
+  font-weight: bold;
+}
+.hide-alert {
+  -webkit-animation: hideAlert 3s forwards;
+  animation: hideAlert 3s forwards;
+}
+@keyframes hideAlert {
+    0% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes hideAlert {
+    0% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+}
+</style>
+<!---Alert system end--->
