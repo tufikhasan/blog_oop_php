@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Blog, Code, Php">
+    <meta name="description" content="This is a coder bloging website">
+    <link rel="shortcut icon" href="/img/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Code Blog | Sign Up</title>
+</head>
+
+<body>
+    <!---Header area start--->
+    <header class="header-area">
+        <div class="main-content flex align-items-center justify-content-space-between">
+            <div class="logo-area">
+                <a href="home.html"><img src="./img/logo.png" alt="Logo" width="120px"></a>
+            </div>
+            <div>
+                <a href="login.html" class="primary_btn">Login</a>
+            </div>
+        </div>
+    </header>
+    <!---Header area end--->
+    <!---form section start--->
+    <section class="main-content">
+        <div class="form-area flex align-items-center justify-content-center">
+            <form action="">
+                <h2>Create a new account</h2>
+                <div class="input-box flex justify-content-space-between">
+                    <div style="width:49%">
+                        <label for="first_name">First Name <span>*</span></label>
+                        <input type="text" name="first_name" id="first_name" placeholder="First Name"
+                            style="width: 100%" required>
+                    </div>
+                    <div style="width:49%">
+                        <label for="last_name">Last Name <span>*</span></label>
+                        <input type="text" name="last_name" id="last_name" placeholder="Last Name" style="width: 100%"
+                            required>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label for="email_address">Enter e-mail address <span>*</span></label>
+                    <input type="email" name="email_address" id="email_address" placeholder="Enter your e-mail"
+                        style="width: 100%" required>
+                </div>
+                <div class="input-box">
+                    <label for="re-email_address">Re-enter your e-mail <span>*</span></label>
+                    <input type="email" name="re-email_address" id="re-email_address" placeholder="Re-enter your e-mail"
+                        style="width: 100%" required>
+                </div>
+                <div class="input-box">
+                    <label>Birthday :</label>
+                    <input type="date" id="birthdaytime" name="birthdaytime">
+                </div>
+                <div class="input-box">
+                    <label for="password">Create Your password <span>*</span></label>
+                    <input name="password" type="password" placeholder="New password" id="password" style="width: 100%"
+                        required />
+                </div>
+                <div class="input-box">
+                    <label for="pp">Profile Picture</label>
+                    <input type="file" id="pp" style="width: 100%" />
+                </div>
+                <div class="input-box">
+                    <input type="radio" id="female" name="same" />
+                    <label for="female">Female</label>
+                    <input type="radio" id="male" name="same" />
+                    <label for="male">Male</label>
+                </div>
+                <div class=" flex justify-content-space-between">
+                    <input class="primary_btn" type="submit" value="Create an account" />
+                    <button class="primary_btn" type="reset">&circlearrowright;</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!---form section end--->
+    <!---footer area start--->
+    <footer class="footer-area">
+        <div class="main-content flex align-items-center justify-content-center">
+            <p>All right reserved by <span>&copy;Tufik hasan</span> | 2022</p>
+        </div>
+    </footer>
+    <!---footer area end--->
+</body>
+
+</html>
