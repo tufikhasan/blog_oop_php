@@ -2,7 +2,7 @@
 <!---form section start--->
 <section class="main-content">
     <div class="form-area flex align-items-center justify-content-center">
-        <form>
+        <form action="includes/register.php" method="POST" >
             <h2>Create a new account</h2>
             <div class="input-box flex justify-content-space-between">
                 <div style="width:49%">
