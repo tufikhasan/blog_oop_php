@@ -9,7 +9,7 @@
     <meta name="description" content="This is a coder bloging website">
     <link rel="shortcut icon" href="/img/fav.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Code Blog | Sign Up</title>
+    <title>Code Blog</title>
 </head>
 
 <body>
@@ -17,10 +17,10 @@
     <header class="header-area">
         <div class="main-content flex align-items-center justify-content-space-between">
             <div class="logo-area">
-                <a href="home.html"><img src="./img/logo.png" alt="Logo" width="120px"></a>
+                <a href="index.php"><img src="./img/logo.png" alt="Logo" width="120px"></a>
             </div>
             <div>
-                <a href="login.html" class="primary_btn">Login</a>
+                <a href="login.php" class="primary_btn">Login</a>
             </div>
         </div>
     </header>
