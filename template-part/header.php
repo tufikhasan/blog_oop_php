@@ -20,6 +20,7 @@
                 <a href="index.php"><img src="./img/logo.png" alt="Logo" width="120px"></a>
             </div>
             <div>
+                <a href="index.php" class="primary_btn">Sign up</a>
                 <a href="login.php" class="primary_btn">Login</a>
             </div>
         </div>
