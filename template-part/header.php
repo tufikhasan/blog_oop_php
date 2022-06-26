@@ -24,4 +24,17 @@
             </div>
         </div>
     </header>
-    <!---Header area end--->
+<!---Header area end--->
+<?php
+	if(isset($_GET['result'])){
+		if($_GET['result'] == 'blank'){
+			echo '<h3 style="color:red;background:gray;margin:0;padding:10px;text-align:center;">Fill all input</h3>';
+		}elseif($_GET['result'] == 'not-match'){
+			echo '<h3 style="color:red;background:gray;margin:0;padding:10px;text-align:center;">Check email</h3>';
+		}if($_GET['result'] == 'exist'){
+			echo '<h3 style="color:red;background:gray;margin:0;padding:10px;text-align:center;">Already have an account</h3>';
+		}if($_GET['result'] == 'successful'){
+			echo '<h3 style="color:red;background:gray;margin:0;padding:10px;text-align:center;">Welcome to Codebook</h3>';
+		}
+	}
+?>
