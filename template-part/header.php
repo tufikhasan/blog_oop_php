@@ -39,6 +39,9 @@
 		}if($_GET['result'] == 'successful'){
 			echo '<span class="hide-alert">&#10526; Welcome to Codebook</span>';
 		}
+        if($_GET['result'] == 'wrong-credentials'){
+			echo '<span class="hide-alert">&#10526; Enter a valid email or password</span>';
+		}
 	}
 ?>
 </div>

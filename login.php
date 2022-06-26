@@ -3,16 +3,16 @@
 <!---form area start--->
 <section class="main-content">
     <div class="form-area flex align-items-center justify-content-center">
-        <form action="">
+        <form action="includes/log_in.php" method="POST">
             <h2>Login your account</h2>
             <div class="input-box">
                 <label for="email_address">Enter e-mail address <span>*</span></label>
-                <input type="email" name="email_address" id="email_address" placeholder="Enter your e-mail"
+                <input type="email" name="user_email" id="email_address" placeholder="Enter your e-mail"
                         style="width: 100%" required />
             </div>
             <div class="input-box">
                 <label for="password">Enter Your password <span>*</span></label>
-                <input name="password" type="password" placeholder="New password" id="password" style="width: 100%"
+                <input name="user_password" type="password" placeholder="New password" id="password" style="width: 100%"
                         required />
             </div>
             <div class=" flex justify-content-space-between">
