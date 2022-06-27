@@ -1,18 +1,23 @@
 <?php
-include('db.php');
+	session_start();
+	
+	include('db.php');
+	
+	$uemail = $_POST['user-email'];
+	
+	$password = md5($_POST['user-password']);
+	
+	$user_login = mysqli_query($conn,"SELECT * FROM user_info WHERE email='$uemail' AND user_password='$password'");
+	
+	$user_num = mysqli_num_rows($user_login);
+	
+	$user_tukra = mysqli_fetch_array($user_login);
 
-$user_email = $_POST['user_email'];
-$user_password = md5($_POST['user_password']);
-
-$user = mysqli_query($conn,"SELECT * FROM user_info WHERE email='$user_email' AND user_password='$user_password'");
-$user_num = mysqli_num_rows($user);
-$user_fetch_array = mysqli_fetch_array($user_num);
-
-if ($user_num == 1) {
-    $_SESSION['first'] = $user_fetch_array['firstname'];
-    $_SESSION['last'] = $user_fetch_array['lastname'];
-    $_SESSION['picture'] = $user_fetch_array['profile_picture'];
-    header("location: ../home.html");
-} else {
-    header("location: ../login.php?result=wrong-credentials");
-}
+	if($user_num ==1){
+		$_SESSION['first'] = $user_tukra['firstname'];
+		$_SESSION['last'] = $user_tukra['lastname'];
+		$_SESSION['image'] = $user_tukra['profile_picture'];
+		header('location: ../home.php');
+	}else{
+        header('location: ../login.php?result=wrong-credentials');
+	}

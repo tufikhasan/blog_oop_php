@@ -7,12 +7,12 @@
             <h2>Login your account</h2>
             <div class="input-box">
                 <label for="email_address">Enter e-mail address <span>*</span></label>
-                <input type="email" name="user_email" id="email_address" placeholder="Enter your e-mail"
+                <input type="email" name="user-email" id="email_address" placeholder="Enter your e-mail"
                         style="width: 100%" required />
             </div>
             <div class="input-box">
                 <label for="password">Enter Your password <span>*</span></label>
-                <input name="user_password" type="password" placeholder="New password" id="password" style="width: 100%"
+                <input name="user-password" type="password" placeholder="New password" id="password" style="width: 100%"
                         required />
             </div>
             <div class=" flex justify-content-space-between">
