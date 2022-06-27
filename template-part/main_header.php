@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML, CSS, JavaScript, Blog, Code, Php">
     <meta name="description" content="This is a coder bloging website">
-    <link rel="shortcut icon" href="/img/fav.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
     <title>Code Blog | Home</title>
 </head>
 
