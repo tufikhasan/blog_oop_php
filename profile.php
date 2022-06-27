@@ -19,7 +19,7 @@ $login_user_pic = $_SESSION['image'];
             while ($post = mysqli_fetch_array($all_post)):
             ?>
             <div class="post">
-                <div class="autor-info flex align-items-center" style="position: relative;>
+                <div class="autor-info flex align-items-center" style="position: relative;">
                     <img class="autor-img" src="./img/<?php echo $post['user_picture'] ?>" alt="<?php echo $post['user_name'] ?>">
                     <div>
                         <h4 class="author-title"><span class="author-title"><?php echo $post['user_name'] ?></span></h4>
