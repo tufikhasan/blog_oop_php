@@ -1,40 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="HTML, CSS, JavaScript, Blog, Code, Php">
-    <meta name="description" content="This is a coder bloging website">
-    <link rel="shortcut icon" href="/img/fav.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Code Blog | Home</title>
-</head>
-
-<body>
-    <!---Header area start--->
-    <header class="header-area">
-        <div class="main-content flex align-items-center justify-content-space-between">
-            <div class="logo-area">
-                <a href="index.html"><img src="./img/logo.png" alt="Logo" width="120px"></a>
-            </div>
-            <div class="flex align-items-center">
-                <div class="avatar">
-                    <a href="profile.html"><img class="autor-img" src="./img/profile.png" alt="profile"><span
-                            class="author-title">Profile</span></a>
-                </div>
-                <ul class="main-menu flex">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="index.html">Log out</a></li>
-                </ul>
-                <div class="mobile-menu">
-                    <button class="menu-bar primary_btn">&#9776;</button>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!---Header area end--->
+<?php
+session_start();
+if(!isset($_SESSION['first'])){
+	header('location: ./index.php');
+}
+include('./template-part/main_header.php') ?>
     <!---Add post section start--->
     <button class="primary_btn add_post_form_open_btn">&plus;</button>
     <section class="add-post-form-area">

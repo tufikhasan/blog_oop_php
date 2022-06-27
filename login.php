@@ -1,4 +1,9 @@
-<?php include('./template-part/header.php') ?>
+<?php 
+session_start();
+if(isset($_SESSION['first'])){
+	header('location: ./home.php');
+}
+include('./template-part/header.php') ?>
 <!---form section start--->
 <!---form area start--->
 <section class="main-content">
