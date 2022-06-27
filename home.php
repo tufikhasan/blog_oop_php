@@ -1,10 +1,12 @@
 <?php
 session_start();
+include('./includes/db.php');
 if(!isset($_SESSION['first'])){
 	header('location: ./login.php');
 }
 include('./template-part/main_header.php') ;
 $full_name = $_SESSION['first'].' '.$_SESSION['last'];
+$login_user_pic = $_SESSION['image'];
 ?>
     <!---Add post section start--->
 <?php include('./template-part/add_post_form.php') ?>
@@ -12,22 +14,24 @@ $full_name = $_SESSION['first'].' '.$_SESSION['last'];
     <!---Home main section start--->
     <section>
         <div class="main-content flex justify-content-space-between post-area">
+            <?php
+            $all_post = mysqli_query($conn,"SELECT * FROM user_post ORDER BY id DESC");
+            while ($post = mysqli_fetch_array($all_post)):
+            ?>
             <div class="post">
                 <div class="autor-info flex align-items-center">
-                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
+                    <img class="autor-img" src="./img/<?php echo $post['user_picture'] ?>" alt="<?php echo $post['user_name'] ?>">
                     <div>
-                        <h4 class="author-title"><span class="author-title"><?php echo $full_name; ?></span></h4>
-                        <p>May 14, 2022</p>
+                        <h4 class="author-title"><span class="author-title"><?php echo $post['user_name'] ?></span></h4>
+                        <p><?php echo $post['post_date'] ?></p>
                     </div>
                 </div>
-                <img src="https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                    alt="post">
-                <h2 class="title">Title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio porro fugiat, nostrum commodi soluta
-                    libero pariatur accusamus, totam consectetur consequuntur laborum eligendi aliquid veritatis sunt
-                    aliquam laboriosam, officia facere error.</p>
+                <img src="img/post/<?php echo $post['post_image'] ?>"
+                    alt="<?php echo $post['post_title'] ?>">
+                <h2 class="title"><?php echo $post['post_title'] ?></h2>
+                <p><?php echo $post['post_content'] ?></p>
                 <div class="comment-form flex align-items-center">
-                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
+                    <img class="autor-img" src="./img/<?php echo $login_user_pic; ?>" alt="<?php echo $full_name; ?>">
                     <form class="flex" style="width: 100%">
                         <input type="text" name="comment" placeholder="Leave a comment" style="width: 100%" required>
                         <button class="primary_btn" type="submit">&#8620;</button>
@@ -35,110 +39,14 @@ $full_name = $_SESSION['first'].' '.$_SESSION['last'];
                 </div>
                 <hr />
                 <div class="comments flex align-items-center">
-                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
+                    <img class="autor-img" src="./img/<?php echo $login_user_pic; ?>" alt="<?php echo $full_name; ?>">
                     <div>
                         <h4 class="author-title"><span><?php echo $full_name; ?></span></h4>
                         <p>Lorem ipsum dolor sit amet consectetur</p>
                     </div>
                 </div>
             </div>
-            <div class="post">
-                <div class="autor-info flex align-items-center">
-                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
-                    <div>
-                        <h4 class="author-title"><span class="author-title"><?php echo $full_name; ?></span></h4>
-                        <p>May 14, 2022</p>
-                    </div>
-                </div>
-                <img src="https://media.istockphoto.com/photos/mountain-landscape-picture-id517188688?k=20&m=517188688&s=612x612&w=0&h=i38qBm2P-6V4vZVEaMy_TaTEaoCMkYhvLCysE7yJQ5Q="
-                    alt="post">
-                <h2 class="title">Title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio porro fugiat, nostrum commodi soluta
-                    libero pariatur accusamus, totam consectetur consequuntur laborum eligendi aliquid veritatis sunt
-                    aliquam laboriosam, officia facere error.</p>
-                <div class="comment-form flex align-items-center">
-                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
-                    <form class="flex" style="width: 100%">
-                        <input type="text" name="comment" placeholder="Leave a comment" style="width: 100%" required>
-                        <button class="primary_btn" type="submit">&#8620;</button>
-                    </form>
-                </div>
-                <hr />
-                <div class="comments flex align-items-center">
-                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
-                    <div>
-                        <h4 class="author-title"><span><?php echo $full_name; ?></span></h4>
-                        <p>Lorem ipsum dolor sit amet consectetur</p>
-                    </div>
-                </div>
-                <div class="comments flex align-items-center">
-                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
-                    <div>
-                        <h4 class="author-title"><span><?php echo $full_name; ?></span></h4>
-                        <p>Lorem ipsum dolor sit amet consectetur</p>
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="autor-info flex align-items-center">
-                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
-                    <div>
-                        <h4 class="author-title"><span class="author-title"><?php echo $full_name; ?></span></h4>
-                        <p>May 14, 2022</p>
-                    </div>
-                </div>
-                <img src="https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                    alt="post">
-                <h2 class="title">Title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio porro fugiat, nostrum commodi soluta
-                    libero pariatur accusamus, totam consectetur consequuntur laborum eligendi aliquid veritatis sunt
-                    aliquam laboriosam, officia facere error.</p>
-                <div class="comment-form flex align-items-center">
-                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
-                    <form class="flex" style="width: 100%">
-                        <input type="text" name="comment" placeholder="Leave a comment" style="width: 100%" required>
-                        <button class="primary_btn" type="submit">&#8620;</button>
-                    </form>
-                </div>
-                <hr />
-                <div class="comments flex align-items-center">
-                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
-                    <div>
-                        <h4 class="author-title"><span><?php echo $full_name; ?></span></h4>
-                        <p>Lorem ipsum dolor sit amet consectetur</p>
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="autor-info flex align-items-center">
-                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
-                    <div>
-                        <h4 class="author-title"><span class="author-title"><?php echo $full_name; ?></span></h4>
-                        <p>May 14, 2022</p>
-                    </div>
-                </div>
-                <img src="https://media.istockphoto.com/photos/mountain-landscape-picture-id517188688?k=20&m=517188688&s=612x612&w=0&h=i38qBm2P-6V4vZVEaMy_TaTEaoCMkYhvLCysE7yJQ5Q="
-                    alt="post">
-                <h2 class="title">Title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio porro fugiat, nostrum commodi soluta
-                    libero pariatur accusamus, totam consectetur consequuntur laborum eligendi aliquid veritatis sunt
-                    aliquam laboriosam, officia facere error.</p>
-                <div class="comment-form flex align-items-center">
-                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
-                    <form class="flex" style="width: 100%">
-                        <input type="text" name="comment" placeholder="Leave a comment" style="width: 100%" required>
-                        <button class="primary_btn" type="submit">&#8620;</button>
-                    </form>
-                </div>
-                <hr />
-                <div class="comments flex align-items-center">
-                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
-                    <div>
-                        <h4 class="author-title"><span><?php echo $full_name; ?></span></h4>
-                        <p>Lorem ipsum dolor sit amet consectetur</p>
-                    </div>
-                </div>
-            </div>
+            <?php endwhile; ?>
         </div>
     </section>
     <!---Home main section end--->
