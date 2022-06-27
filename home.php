@@ -16,6 +16,8 @@ $login_user_pic = $_SESSION['image'];
         <div class="main-content flex justify-content-space-between post-area">
             <?php
             $all_post = mysqli_query($conn,"SELECT * FROM user_post ORDER BY id DESC");
+            $post_num = mysqli_num_rows($all_post);
+            if($post_num > 0):
             while ($post = mysqli_fetch_array($all_post)):
             ?>
             <div class="post">
@@ -47,6 +49,9 @@ $login_user_pic = $_SESSION['image'];
                 </div>
             </div>
             <?php endwhile; ?>
+            <?php else: ?>
+                <?php include('./template-part/no_post_found.php') ?>
+            <?php  endif; ?>
         </div>
     </section>
     <!---Home main section end--->
