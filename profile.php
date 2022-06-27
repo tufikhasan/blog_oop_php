@@ -1,40 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="HTML, CSS, JavaScript, Blog, Code, Php">
-    <meta name="description" content="This is a coder bloging website">
-    <link rel="shortcut icon" href="/img/fav.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Code Blog | Profile</title>
-</head>
-
-<body>
-    <!---Header area start--->
-    <header class="header-area">
-        <div class="main-content flex align-items-center justify-content-space-between">
-            <div class="logo-area">
-                <a href="index.html"><img src="./img/logo.png" alt="Logo" width="120px"></a>
-            </div>
-            <div class="flex align-items-center">
-                <div class="avatar">
-                    <a href="profile.html"><img class="autor-img" src="./img/profile.png" alt="profile"><span
-                            class="author-title">Profile</span></a>
-                </div>
-                <ul class="main-menu flex">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="index.html">Log out</a></li>
-                </ul>
-                <div class="mobile-menu">
-                    <button class="menu-bar primary_btn">&#9776;</button>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!---Header area end--->
+<?php
+session_start();
+if(!isset($_SESSION['first'])){
+	header('location: ./login.php');
+}
+include('./template-part/main_header.php') ;
+$full_name = $_SESSION['first'].' '.$_SESSION['last'];
+?>
     <!---Add post section start--->
     <button class="primary_btn add_post_form_open_btn">&plus;</button>
     <section class="add-post-form-area">
@@ -73,7 +44,7 @@
                 <div class="autor-info flex align-items-center" style="position: relative;">
                     <img class="autor-img" src="./img/profile.png" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span class="author-title">Towfik hasan</span></h4>
+                        <h4 class="author-title"><span class="author-title"><?php echo $full_name; ?></span></h4>
                         <p>May 14, 2022</p>
                     </div>
                     <div class="action-buttons">
@@ -98,7 +69,7 @@
                 <div class="comments flex align-items-center">
                     <img class="autor-img" src="./img/profile.png" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span>Towfik hasan</span></h4>
+                        <h4 class="author-title"><span><?php echo $full_name; ?></span></h4>
                         <p>Lorem ipsum dolor sit amet consectetur</p>
                     </div>
                 </div>
@@ -107,7 +78,7 @@
                 <div class="autor-info flex align-items-center" style="position: relative;">
                     <img class="autor-img" src="./img/profile.png" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span class="author-title">Towfik hasan</span></h4>
+                        <h4 class="author-title"><span class="author-title"><?php echo $full_name; ?></span></h4>
                         <p>May 14, 2022</p>
                     </div>
                     <div class="action-buttons">
@@ -132,14 +103,14 @@
                 <div class="comments flex align-items-center">
                     <img class="autor-img" src="./img/profile.png" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span>Towfik hasan</span></h4>
+                        <h4 class="author-title"><span><?php echo $full_name; ?></span></h4>
                         <p>Lorem ipsum dolor sit amet consectetur</p>
                     </div>
                 </div>
                 <div class="comments flex align-items-center">
                     <img class="autor-img" src="./img/profile.png" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span>Towfik hasan</span></h4>
+                        <h4 class="author-title"><span><?php echo $full_name; ?></span></h4>
                         <p>Lorem ipsum dolor sit amet consectetur</p>
                     </div>
                 </div>
@@ -148,7 +119,7 @@
                 <div class="autor-info flex align-items-center" style="position: relative;">
                     <img class="autor-img" src="./img/profile.png" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span class="author-title">Towfik hasan</span></h4>
+                        <h4 class="author-title"><span class="author-title"><?php echo $full_name; ?></span></h4>
                         <p>May 14, 2022</p>
                     </div>
                     <div class="action-buttons">
@@ -173,7 +144,7 @@
                 <div class="comments flex align-items-center">
                     <img class="autor-img" src="./img/profile.png" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span>Towfik hasan</span></h4>
+                        <h4 class="author-title"><span><?php echo $full_name; ?></span></h4>
                         <p>Lorem ipsum dolor sit amet consectetur</p>
                     </div>
                 </div>
@@ -182,7 +153,7 @@
                 <div class="autor-info flex align-items-center" style="position: relative;">
                     <img class="autor-img" src="./img/profile.png" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span class="author-title">Towfik hasan</span></h4>
+                        <h4 class="author-title"><span class="author-title"><?php echo $full_name; ?></span></h4>
                         <p>May 14, 2022</p>
                     </div>
                     <div class="action-buttons">
@@ -207,7 +178,7 @@
                 <div class="comments flex align-items-center">
                     <img class="autor-img" src="./img/profile.png" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span>Towfik hasan</span></h4>
+                        <h4 class="author-title"><span><?php echo $full_name; ?></span></h4>
                         <p>Lorem ipsum dolor sit amet consectetur</p>
                     </div>
                 </div>
@@ -215,15 +186,4 @@
         </div>
     </section>
     <!---profile main section end--->
-    <!---footer area start--->
-    <footer class="footer-area">
-        <div class="main-content flex align-items-center justify-content-center">
-            <p>All right reserved by <span>&copy;Tufik hasan</span> | 2022</p>
-        </div>
-    </footer>
-    <!---footer area end--->
-    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
-</body>
-
-</html>
+    <?php include('./template-part/main_footer.php') ?>

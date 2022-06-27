@@ -21,7 +21,7 @@
             </div>
             <div class="flex align-items-center">
                 <div class="avatar">
-                    <a href="profile.html"><img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="<?php echo $_SESSION['first'] ?>"><span
+                    <a href="profile.php"><img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="<?php echo $_SESSION['first'] ?>"><span
                             class="author-title">Profile</span></a>
                 </div>
                 <ul class="main-menu flex">
