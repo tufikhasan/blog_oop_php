@@ -35,3 +35,6 @@
         </div>
     </header>
     <!---Header area end--->
+    <!---Alert system start--->
+<?php include('alert.php'); ?>
+<!---Alert system end--->

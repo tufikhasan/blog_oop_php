@@ -4,14 +4,17 @@
 		if($_GET['result'] == 'blank'){
 			echo '<span class="hide-alert">&#10526; Fill all input</span>';
 		}elseif($_GET['result'] == 'not-match'){
-			echo '<span class="hide-alert">&#10526; Check email</span>';
+			echo '<span class="hide-alert">&#10526; Check your re-write email</span>';
 		}if($_GET['result'] == 'exist'){
 			echo '<span class="hide-alert">&#10526; Already have an account</span>';
 		}if($_GET['result'] == 'successful'){
 			echo '<span class="hide-alert">&#10526; Welcome to Codebook</span>';
-		}
-        if($_GET['result'] == 'wrong-credentials'){
+		}if($_GET['result'] == 'wrong-credentials'){
 			echo '<span class="hide-alert">&#10526; Enter a valid email or password</span>';
+		}if($_GET['result'] == 'post-added-successful'){
+			echo '<span class="hide-alert">&#10526; Post created successful</span>';
+		}if($_GET['result'] == 'unable-to-create-post'){
+			echo '<span class="hide-alert">&#10526; Unable to create a post</span>';
 		}
 	}
 ?>
