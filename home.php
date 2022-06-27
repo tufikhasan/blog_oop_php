@@ -3,7 +3,9 @@ session_start();
 if(!isset($_SESSION['first'])){
 	header('location: ./index.php');
 }
-include('./template-part/main_header.php') ?>
+include('./template-part/main_header.php') ;
+$full_name = $_SESSION['first'].' '.$_SESSION['last'];
+?>
     <!---Add post section start--->
     <button class="primary_btn add_post_form_open_btn">&plus;</button>
     <section class="add-post-form-area">
@@ -40,9 +42,9 @@ include('./template-part/main_header.php') ?>
         <div class="main-content flex justify-content-space-between post-area">
             <div class="post">
                 <div class="autor-info flex align-items-center">
-                    <img class="autor-img" src="./img/profile.png" alt="Towfik">
+                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span class="author-title">Towfik hasan</span></h4>
+                        <h4 class="author-title"><span class="author-title"><?php echo $full_name; ?></span></h4>
                         <p>May 14, 2022</p>
                     </div>
                 </div>
@@ -53,7 +55,7 @@ include('./template-part/main_header.php') ?>
                     libero pariatur accusamus, totam consectetur consequuntur laborum eligendi aliquid veritatis sunt
                     aliquam laboriosam, officia facere error.</p>
                 <div class="comment-form flex align-items-center">
-                    <img class="autor-img" src="./img/profile.png" alt="Towfik">
+                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
                     <form class="flex" style="width: 100%">
                         <input type="text" name="comment" placeholder="Leave a comment" style="width: 100%" required>
                         <button class="primary_btn" type="submit">&#8620;</button>
@@ -61,18 +63,18 @@ include('./template-part/main_header.php') ?>
                 </div>
                 <hr />
                 <div class="comments flex align-items-center">
-                    <img class="autor-img" src="./img/profile.png" alt="Towfik">
+                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span>Towfik hasan</span></h4>
+                        <h4 class="author-title"><span><?php echo $full_name; ?></span></h4>
                         <p>Lorem ipsum dolor sit amet consectetur</p>
                     </div>
                 </div>
             </div>
             <div class="post">
                 <div class="autor-info flex align-items-center">
-                    <img class="autor-img" src="./img/profile.png" alt="Towfik">
+                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span class="author-title">Towfik hasan</span></h4>
+                        <h4 class="author-title"><span class="author-title"><?php echo $full_name; ?></span></h4>
                         <p>May 14, 2022</p>
                     </div>
                 </div>
@@ -83,7 +85,7 @@ include('./template-part/main_header.php') ?>
                     libero pariatur accusamus, totam consectetur consequuntur laborum eligendi aliquid veritatis sunt
                     aliquam laboriosam, officia facere error.</p>
                 <div class="comment-form flex align-items-center">
-                    <img class="autor-img" src="./img/profile.png" alt="Towfik">
+                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
                     <form class="flex" style="width: 100%">
                         <input type="text" name="comment" placeholder="Leave a comment" style="width: 100%" required>
                         <button class="primary_btn" type="submit">&#8620;</button>
@@ -91,25 +93,25 @@ include('./template-part/main_header.php') ?>
                 </div>
                 <hr />
                 <div class="comments flex align-items-center">
-                    <img class="autor-img" src="./img/profile.png" alt="Towfik">
+                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span>Towfik hasan</span></h4>
+                        <h4 class="author-title"><span><?php echo $full_name; ?></span></h4>
                         <p>Lorem ipsum dolor sit amet consectetur</p>
                     </div>
                 </div>
                 <div class="comments flex align-items-center">
-                    <img class="autor-img" src="./img/profile.png" alt="Towfik">
+                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span>Towfik hasan</span></h4>
+                        <h4 class="author-title"><span><?php echo $full_name; ?></span></h4>
                         <p>Lorem ipsum dolor sit amet consectetur</p>
                     </div>
                 </div>
             </div>
             <div class="post">
                 <div class="autor-info flex align-items-center">
-                    <img class="autor-img" src="./img/profile.png" alt="Towfik">
+                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span class="author-title">Towfik hasan</span></h4>
+                        <h4 class="author-title"><span class="author-title"><?php echo $full_name; ?></span></h4>
                         <p>May 14, 2022</p>
                     </div>
                 </div>
@@ -120,7 +122,7 @@ include('./template-part/main_header.php') ?>
                     libero pariatur accusamus, totam consectetur consequuntur laborum eligendi aliquid veritatis sunt
                     aliquam laboriosam, officia facere error.</p>
                 <div class="comment-form flex align-items-center">
-                    <img class="autor-img" src="./img/profile.png" alt="Towfik">
+                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
                     <form class="flex" style="width: 100%">
                         <input type="text" name="comment" placeholder="Leave a comment" style="width: 100%" required>
                         <button class="primary_btn" type="submit">&#8620;</button>
@@ -128,18 +130,18 @@ include('./template-part/main_header.php') ?>
                 </div>
                 <hr />
                 <div class="comments flex align-items-center">
-                    <img class="autor-img" src="./img/profile.png" alt="Towfik">
+                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span>Towfik hasan</span></h4>
+                        <h4 class="author-title"><span><?php echo $full_name; ?></span></h4>
                         <p>Lorem ipsum dolor sit amet consectetur</p>
                     </div>
                 </div>
             </div>
             <div class="post">
                 <div class="autor-info flex align-items-center">
-                    <img class="autor-img" src="./img/profile.png" alt="Towfik">
+                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span class="author-title">Towfik hasan</span></h4>
+                        <h4 class="author-title"><span class="author-title"><?php echo $full_name; ?></span></h4>
                         <p>May 14, 2022</p>
                     </div>
                 </div>
@@ -150,7 +152,7 @@ include('./template-part/main_header.php') ?>
                     libero pariatur accusamus, totam consectetur consequuntur laborum eligendi aliquid veritatis sunt
                     aliquam laboriosam, officia facere error.</p>
                 <div class="comment-form flex align-items-center">
-                    <img class="autor-img" src="./img/profile.png" alt="Towfik">
+                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
                     <form class="flex" style="width: 100%">
                         <input type="text" name="comment" placeholder="Leave a comment" style="width: 100%" required>
                         <button class="primary_btn" type="submit">&#8620;</button>
@@ -158,9 +160,9 @@ include('./template-part/main_header.php') ?>
                 </div>
                 <hr />
                 <div class="comments flex align-items-center">
-                    <img class="autor-img" src="./img/profile.png" alt="Towfik">
+                    <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="Towfik">
                     <div>
-                        <h4 class="author-title"><span>Towfik hasan</span></h4>
+                        <h4 class="author-title"><span><?php echo $full_name; ?></span></h4>
                         <p>Lorem ipsum dolor sit amet consectetur</p>
                     </div>
                 </div>

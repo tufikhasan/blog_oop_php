@@ -10,7 +10,7 @@ $password = md5($_POST['password']);
 
 $profile_picture = $_FILES['profile-picture']['name'];
 $tmp_profile_picture = $_FILES['profile-picture']['tmp_name'];
-move_uploaded_file($tmp_profile_picture,'../images/'.$profile_picture);
+move_uploaded_file($tmp_profile_picture,'../img/'.$profile_picture);
 
 $gender = $_POST['gender'];
 
