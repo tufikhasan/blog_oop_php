@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['first'])){
-	header('location: ./index.php');
+	header('location: ./login.php');
 }
 include('./template-part/main_header.php') ;
 $full_name = $_SESSION['first'].' '.$_SESSION['last'];
