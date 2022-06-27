@@ -26,7 +26,7 @@
                 </div>
                 <ul class="main-menu flex">
                     <li><a href="home.php">Home</a></li>
-                    <li><a href="login.php">Log out</a></li>
+                    <li><a href="./includes/logout.php">Log out</a></li>
                 </ul>
                 <div class="mobile-menu">
                     <button class="menu-bar primary_btn">&#9776;</button>
