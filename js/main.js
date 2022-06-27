@@ -9,5 +9,8 @@
     $('.add_post_form_close_btn').click(function () {
       $('.add-post-form-area').css('display', 'none');
     });
+    $('.create_new_post').click(function () {
+      $('.add-post-form-area').css('display', 'block');
+    });
   });
 })(jQuery);
