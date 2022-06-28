@@ -13,13 +13,22 @@ if(isset($_GET['post-id'])){
     <!---Add post section start--->
 <?php include('./template-part/add_post_form.php') ?>
     <!---single page section start--->
-    <section>
-        <div class="main-content">
+    <section class="main-content flex justify-content-center" style="padding: 1rem;">
         <?php
             $all_post = mysqli_query($conn,"SELECT * FROM user_post WHERE id='$post_id'");
             while ($post = mysqli_fetch_array($all_post)): ?>
-            <h1 class="title">POST TITLE: <span><?php echo $post['post_title']; ?></span></h1>
+            <div class="single-post">
+                <div class="autor-info flex align-items-center" style="position: relative;">
+                    <img class="autor-img" src="./img/<?php echo $post['user_picture'] ?>" alt="<?php echo $post['user_name'] ?>">
+                    <div>
+                        <h4 class="author-title"><span class="author-title"><?php echo $post['user_name'] ?></span></h4>
+                        <p><?php echo $post['post_date'] ?></p>
+                    </div>
+                </div>
+                <h1 class="title"><?php echo $post['post_title']; ?></h1>
+                <img src="img/post/<?php echo $post['post_image'] ?>" alt="<?php echo $post['post_title']; ?>">
+                <p><?php echo $post['post_content']; ?></p>
+            </div>
             <?php endwhile; ?>
-        </div>
     </section>
 <?php include('./template-part/main_footer.php') ?>

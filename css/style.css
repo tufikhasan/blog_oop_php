@@ -100,7 +100,7 @@ button.add_post_form_close_btn {
 .post > img:hover {
   transform: scale(1.1);
 }
-.post a > h2 {
+.post > h2 {
   font-size: 1.2rem;
   margin: 0.5rem 0;
   color: var(--black-text);
@@ -108,6 +108,7 @@ button.add_post_form_close_btn {
 .post > p {
   font-size: 0.9rem;
   color: var(--black-text);
+  margin-bottom: 1rem;
 }
 .comment-form {
   margin-top: 2rem;
@@ -132,6 +133,23 @@ button.add_post_form_close_btn {
   color: var(--primary-text);
   cursor: pointer;
   font-size: 0.8rem;
+}
+/*-------single-post style----------*/
+.single-post {
+  max-width: 600px;
+}
+.single-post .autor-info {
+  margin-bottom: 0;
+}
+.single-post > img {
+  max-height: 400px;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  object-fit: fill;
+}
+.single-post > p {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
 }
 /*-------Footer style----------*/
 .footer-area {
@@ -173,7 +191,8 @@ button.add_post_form_close_btn {
   }
 }
 @media screen and (max-width: 600px) {
-  .post {
+  .post,
+  .single-post {
     width: 100%;
   }
 }
