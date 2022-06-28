@@ -8,6 +8,7 @@
     <meta name="keywords" content="HTML, CSS, JavaScript, Blog, Code, Php">
     <meta name="description" content="This is a coder bloging website">
     <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <title>Code Blog | Home</title>
 </head>

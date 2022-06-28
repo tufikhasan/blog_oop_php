@@ -20,7 +20,8 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin-right: 0.2rem;
+  margin-right: 0.4rem;
+  object-fit: fill;
 }
 .main-menu {
   flex-direction: row;
@@ -69,16 +70,17 @@ button.add_post_form_close_btn {
 }
 /*-------posts-section style----------*/
 .post-area {
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   align-items: flex-start;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 .post {
-  width: 48%;
+  width: 300px;
   box-shadow: var(--primary-shadow);
   padding: 1rem;
   margin-bottom: 1.5rem;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .autor-info {
   margin-bottom: 1rem;
@@ -90,9 +92,13 @@ button.add_post_form_close_btn {
 }
 .post > img {
   width: 100%;
-  height: 280px;
+  height: 220px;
   object-fit: fill;
-  border-radius: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.post > img:hover {
+  transform: scale(1.1);
 }
 .post > h2 {
   font-size: 1.2rem;
@@ -119,14 +125,12 @@ button.add_post_form_close_btn {
   top: 0;
   right: 0;
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
 }
-.action-buttons button {
-  border: 1px solid var(--primary-text);
+.action-buttons a i {
   color: var(--primary-text);
   cursor: pointer;
   font-size: 0.8rem;
-  padding: 5px;
 }
 /*-------Footer style----------*/
 .footer-area {
@@ -161,9 +165,6 @@ button.add_post_form_close_btn {
   .avatar span {
     display: none;
   }
-  .post-area {
-    padding: 2rem 1rem;
-  }
 }
 @media screen and (min-width: 900px) {
   .mobile-menu {
@@ -171,9 +172,6 @@ button.add_post_form_close_btn {
   }
 }
 @media screen and (max-width: 600px) {
-  .post-area {
-    flex-direction: column;
-  }
   .post {
     width: 100%;
   }

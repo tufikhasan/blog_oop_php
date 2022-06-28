@@ -2,27 +2,27 @@
 <?php
     if(isset($_GET['result'])){
 		if($_GET['result'] == 'blank'){
-			echo '<span class="hide-alert">&#10526; Fill all input</span>';
+			echo '<span class="hide-alert danger">Fill all input  &nbsp;&nbsp;<i class="fa-solid fa-circle-exclamation"></i></span>';
 		}elseif($_GET['result'] == 'not-match'){
-			echo '<span class="hide-alert">&#10526; Check your re-write email</span>';
+			echo '<span class="hide-alert danger">Check your re-write email  &nbsp;&nbsp;<i class="fa-solid fa-message-check"></i></span>';
 		}if($_GET['result'] == 'exist'){
-			echo '<span class="hide-alert">&#10526; Already have an account</span>';
+			echo '<span class="hide-alert danger">Already have an account &nbsp;&nbsp;<i class="fa-solid fa-skull-crossbones"></i><</span>';
 		}if($_GET['result'] == 'successful'){
-			echo '<span class="hide-alert">&#10526; Welcome to Codebook</span>';
+			echo '<span class="hide-alert">Welcome to Codeblog share your blog &nbsp;&nbsp;<i class="fa-solid fa-wreath"></i></span>';
 		}if($_GET['result'] == 'wrong-credentials'){
-			echo '<span class="hide-alert">&#10526; Enter a valid email or password</span>';
+			echo '<span class="hide-alert danger">Enter a valid email or password  &nbsp;&nbsp;<i class="fa-solid fa-circle-exclamation"></i></span>';
 		}if($_GET['result'] == 'post-added-successful'){
-			echo '<span class="hide-alert">&#10526; Post created successful</span>';
+			echo '<span class="hide-alert">Post created successful &nbsp;&nbsp;<i class="fa-solid fa-check-double"></i></span>';
 		}if($_GET['result'] == 'unable-to-create-post'){
-			echo '<span class="hide-alert">&#10526; Unable to create a post</span>';
+			echo '<span class="hide-alert danger">Unable to create a post  &nbsp;&nbsp;<i class="fa-solid fa-circle-exclamation"></i></span>';
 		}if($_GET['result'] == 'comment-successful'){
-			echo '<span class="hide-alert">&#10526; Your Comment has been posted successful</span>';
+			echo '<span class="hide-alert">Your Comment has been posted successful &nbsp;&nbsp;<i class="fa-solid fa-check-double"></i></span>';
 		}if($_GET['result'] == 'post-deleted-successfully'){
-			echo '<span class="hide-alert">&#10526; Your Post has been deleted successfully</span>';
-		}if($_GET['result'] == 'do-not-change-anything'){
-			echo '<span class="hide-alert">&#10526; Your don\'t change anything</span>';
+			echo '<span class="hide-alert danger">Your Post has been deleted successfully &nbsp;&nbsp;<i class="fa-solid fa-skull-crossbones"></i></span>';
+		}if($_GET['result'] == 'did-not-change-anything'){
+			echo '<span class="hide-alert danger">You haven\'t changed anything&nbsp;&nbsp;<i class="fa-solid fa-circle-exclamation"></i></span>';
 		}if($_GET['result'] == 'post-update-successfully'){
-			echo '<span class="hide-alert">&#10526; Your Post has been update successfully</span>';
+			echo '<span class="hide-alert">Your Post has been update successfully&nbsp;&nbsp;<i class="fa-solid fa-check-double"></i></span>';
 		}
 	}
 ?>
@@ -43,6 +43,9 @@
   background: #27ae60;
   font-weight: bold;
   border-radius: 10px;
+}
+.alert-message span.danger{
+	background:#d63031
 }
 .hide-alert {
   -webkit-animation: hideAlert 3s forwards;

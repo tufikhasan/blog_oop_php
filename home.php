@@ -13,7 +13,7 @@ $login_user_pic = $_SESSION['image'];
     <!---Add post section end--->
     <!---Home main section start--->
     <section>
-        <div class="main-content flex justify-content-space-between post-area">
+        <div class="main-content flex justify-content-center post-area">
             <?php
             $all_post = mysqli_query($conn,"SELECT * FROM user_post ORDER BY id DESC");
             $post_num = mysqli_num_rows($all_post);
@@ -38,7 +38,7 @@ $login_user_pic = $_SESSION['image'];
                     <form class="flex" style="width: 100%" action="includes/comment.php" method="POST">
                         <input type="text" name="comment" placeholder="Leave a comment" style="width: 100%" required>
                         <input type="hidden" name="comment-postid" value="<?php echo $post_id; ?>" />
-                        <button class="primary_btn" type="submit">&#8620;</button>
+                        <button style="margin-left:5px;" class="primary_btn" type="submit"><i class="fa-solid fa-arrow-right-to-bracket"></i></button>
                     </form>
                 </div>
                 <hr />

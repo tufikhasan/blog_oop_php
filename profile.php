@@ -13,7 +13,7 @@ $login_user_pic = $_SESSION['image'];
     <!---Add post section end--->
     <!---profile main section start--->
     <section>
-        <div class="main-content flex justify-content-space-between post-area">
+        <div class="main-content flex justify-content-center post-area">
         <?php
             $all_post = mysqli_query($conn,"SELECT * FROM user_post WHERE user_name='$full_name' ORDER BY id DESC");
             $post_num = mysqli_num_rows($all_post);
@@ -29,8 +29,8 @@ $login_user_pic = $_SESSION['image'];
                         <p><?php echo $post['post_date'] ?></p>
                     </div>
                     <div class="action-buttons">
-                        <a href="edit-form.php?edit=<?php echo $post_id; ?>" >&#x022F3;</a>
-                        <a href="includes/delete.php?delete=<?php echo $post_id; ?>" >&#10539;</a>
+                        <a href="edit-form.php?edit=<?php echo $post_id; ?>" ><i class="fa-solid fa-pen-to-square"></i></a>
+                        <a href="includes/delete.php?delete=<?php echo $post_id; ?>" ><i class="fa-solid fa-trash"></i></a>
                     </div>
                 </div>
                 <img src="img/post/<?php echo $post['post_image'] ?>"
@@ -42,7 +42,7 @@ $login_user_pic = $_SESSION['image'];
                     <form class="flex" style="width: 100%" action="includes/comment.php" method="POST">
                         <input type="text" name="comment" placeholder="Leave a comment" style="width: 100%" required>
                         <input type="hidden" name="comment-postid" value="<?php echo $post_id; ?>" />
-                        <button class="primary_btn" type="submit">&#8620;</button>
+                        <button style="margin-left:5px;" class="primary_btn" type="submit"><i class="fa-solid fa-arrow-right-to-bracket"></i></button>
                     </form>
                 </div>
                 <hr />
