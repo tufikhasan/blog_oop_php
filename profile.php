@@ -29,7 +29,7 @@ $login_user_pic = $_SESSION['image'];
                         <p><?php echo $post['post_date'] ?></p>
                     </div>
                     <div class="action-buttons">
-                        <button>&#x022F3;</button>
+                        <a href="edit-form.php?edit=<?php echo $post_id; ?>" >&#x022F3;</a>
                         <a href="includes/delete.php?delete=<?php echo $post_id; ?>" >&#10539;</a>
                     </div>
                 </div>

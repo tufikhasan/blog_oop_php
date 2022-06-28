@@ -118,6 +118,8 @@ button.add_post_form_close_btn {
   position: absolute;
   top: 0;
   right: 0;
+  display: flex;
+  flex-direction: column;
 }
 .action-buttons button {
   border: 1px solid var(--primary-text);
