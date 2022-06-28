@@ -44,6 +44,8 @@ $login_user_pic = $_SESSION['image'];
                 <hr />
                 <?php
                 $all_comment = mysqli_query($conn,"SELECT * FROM user_comment WHERE comment_post_id='$post_id' ORDER BY id DESC");
+                $comment_num = mysqli_num_rows($all_comment);
+                if($comment_num > 0):
                 while ($comm_fetch = mysqli_fetch_array($all_comment) ): ?>
                 <div class="comments flex align-items-center">
                     <img class="autor-img" src="./img/<?php echo $comm_fetch['user_pic']; ?>" alt="<?php echo $comm_fetch['user_name']; ?>">
@@ -53,6 +55,11 @@ $login_user_pic = $_SESSION['image'];
                     </div>
                 </div>
                 <?php endwhile; ?>
+                <?php else: ?>
+                    <div class="comments flex align-items-center justify-content-center">
+                        <h4 class="author-title">No comments have been posted yet</h4>
+                    </div>
+                <?php endif; ?>
             </div>
             <?php endwhile; ?>
             <?php else: ?>
