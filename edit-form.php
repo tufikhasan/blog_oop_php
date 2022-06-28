@@ -31,11 +31,13 @@ include('./template-part/main_header.php') ?>
                 <label for="post-img">Post image</label>
                 <input type="file" id="edit-post-img" style="width: 100%" name="edit-post-img" />
             </div>
+            <?php if($post_tukra['post_image']): ?>
             <div class=" flex align-items-center justify-content-center">
                 <img src="img/post/<?php echo $post_tukra['post_image']; ?>" alt="" width="100px" height="auto"/>
             </div>
+            <?php endif;?>
             <div class=" flex justify-content-space-between">
-                <input class="primary_btn" type="submit" value="Add new post" />
+                <input class="primary_btn" type="submit" value="Update post" />
                 <button class="primary_btn" type="reset">&circlearrowright;</button>
             </div>
         </form>
