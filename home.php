@@ -31,7 +31,7 @@ $login_user_pic = $_SESSION['image'];
                 </div>
                 <img src="img/post/<?php echo $post['post_image'] ?>"
                     alt="<?php echo $post['post_title'] ?>">
-                <h2 class="title"><?php echo $post['post_title'] ?></h2>
+                <a href="single.php?post-id=<?php echo $post_id; ?>"><h2 class="title"><?php echo $post['post_title'] ?></h2></a>
                 <p><?php echo $post['post_content'] ?></p>
                 <div class="comment-form flex align-items-center">
                     <img class="autor-img" src="./img/<?php echo $login_user_pic; ?>" alt="<?php echo $full_name; ?>">

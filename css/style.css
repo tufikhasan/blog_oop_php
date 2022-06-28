@@ -100,9 +100,10 @@ button.add_post_form_close_btn {
 .post > img:hover {
   transform: scale(1.1);
 }
-.post > h2 {
+.post a > h2 {
   font-size: 1.2rem;
   margin: 0.5rem 0;
+  color: var(--black-text);
 }
 .post > p {
   font-size: 0.9rem;
