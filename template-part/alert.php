@@ -16,6 +16,9 @@
 		}if($_GET['result'] == 'unable-to-create-post'){
 			echo '<span class="hide-alert">&#10526; Unable to create a post</span>';
 		}
+    if($_GET['result'] == 'comment-successful'){
+			echo '<span class="hide-alert">&#10526; Your Comment has been posted successful</span>';
+		}
 	}
 ?>
 </div>

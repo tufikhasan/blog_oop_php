@@ -19,6 +19,7 @@ $login_user_pic = $_SESSION['image'];
             $post_num = mysqli_num_rows($all_post);
             if($post_num > 0):
             while ($post = mysqli_fetch_array($all_post)):
+                $post_id = $post['id'];
             ?>
             <div class="post">
                 <div class="autor-info flex align-items-center">
@@ -34,8 +35,9 @@ $login_user_pic = $_SESSION['image'];
                 <p><?php echo $post['post_content'] ?></p>
                 <div class="comment-form flex align-items-center">
                     <img class="autor-img" src="./img/<?php echo $login_user_pic; ?>" alt="<?php echo $full_name; ?>">
-                    <form class="flex" style="width: 100%">
+                    <form class="flex" style="width: 100%" action="includes/comment.php" method="POST">
                         <input type="text" name="comment" placeholder="Leave a comment" style="width: 100%" required>
+                        <input type="hidden" name="comment-postid" value="<?php echo $post_id; ?>" />
                         <button class="primary_btn" type="submit">&#8620;</button>
                     </form>
                 </div>
