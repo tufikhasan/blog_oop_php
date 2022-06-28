@@ -42,13 +42,17 @@ $login_user_pic = $_SESSION['image'];
                     </form>
                 </div>
                 <hr />
+                <?php
+                $all_comment = mysqli_query($conn,"SELECT * FROM user_comment WHERE comment_post_id='$post_id' ORDER BY id DESC");
+                while ($comm_fetch = mysqli_fetch_array($all_comment) ): ?>
                 <div class="comments flex align-items-center">
-                    <img class="autor-img" src="./img/<?php echo $login_user_pic; ?>" alt="<?php echo $full_name; ?>">
+                    <img class="autor-img" src="./img/<?php echo $comm_fetch['user_pic']; ?>" alt="<?php echo $comm_fetch['user_name']; ?>">
                     <div>
-                        <h4 class="author-title"><span><?php echo $full_name; ?></span></h4>
-                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                        <h4 class="author-title"><span><?php echo $comm_fetch['user_name']; ?></span></h4>
+                        <p><?php echo $comm_fetch['comment']; ?></p>
                     </div>
                 </div>
+                <?php endwhile; ?>
             </div>
             <?php endwhile; ?>
             <?php else: ?>
