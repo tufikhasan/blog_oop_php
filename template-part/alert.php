@@ -15,9 +15,10 @@
 			echo '<span class="hide-alert">&#10526; Post created successful</span>';
 		}if($_GET['result'] == 'unable-to-create-post'){
 			echo '<span class="hide-alert">&#10526; Unable to create a post</span>';
-		}
-    if($_GET['result'] == 'comment-successful'){
+		}if($_GET['result'] == 'comment-successful'){
 			echo '<span class="hide-alert">&#10526; Your Comment has been posted successful</span>';
+		}if($_GET['result'] == 'post-deleted-successfully'){
+			echo '<span class="hide-alert">&#10526; Your Post has been deleted successfully</span>';
 		}
 	}
 ?>
