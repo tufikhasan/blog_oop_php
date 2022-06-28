@@ -19,6 +19,10 @@
 			echo '<span class="hide-alert">&#10526; Your Comment has been posted successful</span>';
 		}if($_GET['result'] == 'post-deleted-successfully'){
 			echo '<span class="hide-alert">&#10526; Your Post has been deleted successfully</span>';
+		}if($_GET['result'] == 'do-not-change-anything'){
+			echo '<span class="hide-alert">&#10526; Your don\'t change anything</span>';
+		}if($_GET['result'] == 'post-update-successfully'){
+			echo '<span class="hide-alert">&#10526; Your Post has been update successfully</span>';
 		}
 	}
 ?>
@@ -29,6 +33,7 @@
   position: fixed;
   top: 100px;
   left: 1.5rem;
+  z-index: 1;
 }
 .alert-message span{
   padding: 10px;
@@ -37,6 +42,7 @@
   color: white;
   background: #27ae60;
   font-weight: bold;
+  border-radius: 10px;
 }
 .hide-alert {
   -webkit-animation: hideAlert 3s forwards;
