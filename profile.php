@@ -30,7 +30,7 @@ $login_user_pic = $_SESSION['image'];
                     </div>
                     <div class="action-buttons">
                         <button>&#x022F3;</button>
-                        <button>&#10539;</button>
+                        <a href="includes/delete.php?delete=<?php echo $post_id; ?>" >&#10539;</a>
                     </div>
                 </div>
                 <img src="img/post/<?php echo $post['post_image'] ?>"
