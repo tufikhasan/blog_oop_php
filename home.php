@@ -32,7 +32,7 @@ $login_user_pic = $_SESSION['image'];
                 <img src="img/post/<?php echo $post['post_image'] ?>"
                     alt="<?php echo $post['post_title'] ?>">
                 <a href="single.php?post-id=<?php echo $post_id; ?>"><h2 class="title"><?php echo $post['post_title'] ?></h2></a>
-                <p><?php echo $post['post_content'] ?></p>
+                <p class='slice'><?php echo $post['post_content'] ?></p>
                 <div class="comment-form flex align-items-center">
                     <img class="autor-img" src="./img/<?php echo $login_user_pic; ?>" alt="<?php echo $full_name; ?>">
                     <form class="flex" style="width: 100%" action="includes/comment.php" method="POST">
