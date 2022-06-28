@@ -4,11 +4,13 @@
 	
 	include('db.php');
 	
+	date_default_timezone_set('Asia/Dhaka');
+	
 	$user_nam = $_SESSION['first'].' '.$_SESSION['last'];
 	
 	$user_pic = $_SESSION['image'];
 	
-	$postdate = date('F, d Y');
+	$postdate = date('F d, Y h:i a');
 	
 	$posttitle = $_POST['postTitle'];
 
