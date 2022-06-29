@@ -11,5 +11,10 @@ $post_id = $_POST['comment-postid'];
 if ($comments) {
     $query = "INSERT INTO user_comment(user_name,user_pic,comment,comment_post_id) VALUES('$user_nam','$user_picture','$comments','$post_id')";
     mysqli_query($conn,$query);
-    header('location: ../home.php?result=comment-successful');
+    if (isset($_GET['single-post-id'])) {
+        header("location: ../single.php?post-id=".$post_id);
+    } else {
+        header('location: ../home.php?result=comment-successful');
+    }
+
 }
