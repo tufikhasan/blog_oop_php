@@ -26,11 +26,19 @@
 	if($postcont || $post_image ){
 		
 		mysqli_query($conn,"INSERT INTO user_post(user_name,user_picture,post_date,post_title,post_content,post_image) VALUES('$user_nam','$user_pic','$postdate','$posttitle','$postcont','$post_image')");
-		
-		header('location: ../home.php?result=post-added-successful');
+
+		if (isset($_GET['profile'])) {
+			header('location: ../profile.php?result=post-added-successful');
+		} else {
+			header('location: ../home.php?result=post-added-successful');
+		}
 		
 	}else{
-		header('location: ../home.php?result=unable-to-create-post');
+		if (isset($_GET['profile'])) {
+			header('location: ../profile.php?result=unable-to-create-post');
+		} else {
+			header('location: ../home.php?result=unable-to-create-post');
+		}
 	}
 	
 
