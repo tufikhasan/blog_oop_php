@@ -72,7 +72,7 @@ $login_user_pic = $_SESSION['image'];
             <?php if($post['post_image']): ?>
                 <img src="img/post/<?php echo $post['post_image'] ?>" alt="<?php echo $post['post_title'] ?>">
             <?php else: ?>
-                <img src="img/code-blog.jpg" alt="Code Blog">
+                <img src="img/code-blog.png" alt="Code Blog">
             <?php endif; ?>
             <h2 class="title">
                 <?php echo $post['post_title'] ?>

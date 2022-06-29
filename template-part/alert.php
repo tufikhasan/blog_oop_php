@@ -19,8 +19,8 @@
 			echo '<span class="hide-alert">Your Comment has been posted successful &nbsp;&nbsp;<i class="fa-solid fa-check-double"></i></span>';
 		}if($_GET['result'] == 'post-deleted-successfully'){
 			echo '<span class="hide-alert danger">Your Post has been deleted successfully &nbsp;&nbsp;<i class="fa-solid fa-skull-crossbones"></i></span>';
-		}if($_GET['result'] == 'did-not-change-anything'){
-			echo '<span class="hide-alert danger">You haven\'t changed anything&nbsp;&nbsp;<i class="fa-solid fa-circle-exclamation"></i></span>';
+		}if($_GET['result'] == 'can-not-update-blank-post'){
+			echo '<span class="hide-alert danger">You haven\'t update blank post &nbsp;&nbsp;<i class="fa-solid fa-circle-exclamation"></i></span>';
 		}if($_GET['result'] == 'post-update-successfully'){
 			echo '<span class="hide-alert">Your Post has been update successfully&nbsp;&nbsp;<i class="fa-solid fa-check-double"></i></span>';
 		}
