@@ -23,12 +23,12 @@ include('./template-part/header.php') ?>
             </div>
             <div class="input-box">
                 <label for="email_address">Enter e-mail address <span>*</span></label>
-                <input type="email" name="email-address" id="email_address" placeholder="Enter your e-mail"
+                <input type="email" name="email-address" id="email_address" placeholder="Enter your e-mail address"
                         style="width: 100%" required>
             </div>
             <div class="input-box">
-                <label for="re-email_address">Re-enter your e-mail <span>*</span></label>
-                <input type="email" name="re-email_address" id="re-email_address" placeholder="Re-enter your e-mail"
+                <label for="re-email_address">Confirm your e-mail <span>*</span></label>
+                <input type="email" name="re-email_address" id="re-email_address" placeholder="Confirm your e-mail address"
                         style="width: 100%" required>
             </div>
             <div class="input-box">
