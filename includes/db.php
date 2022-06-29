@@ -2,7 +2,7 @@
 $server = 'localhost';
 $username = 'root';
 $password = '';
-$database = 'codebook';
+$database = 'codeblog';
 // Create connection
 $conn =  new mysqli($server,$username,$password,$database);
 
