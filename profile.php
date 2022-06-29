@@ -40,7 +40,7 @@ $login_user_pic = $_SESSION['image'];
                     <a href="single.php?post-id=<?php echo $post_id; ?>" class="primary_btn">Read more</a>
                 <div class="comment-form flex align-items-center">
                     <img class="autor-img" src="./img/<?php echo $login_user_pic; ?>" alt="<?php echo $full_name; ?>">
-                    <form class="flex" style="width: 100%" action="includes/comment.php" method="POST">
+                    <form class="flex" style="width: 100%" action="includes/comment.php?profile=<?php echo $_SESSION['first']; ?>" method="POST">
                         <input type="text" name="comment" placeholder="Leave a comment" style="width: 100%" required>
                         <input type="hidden" name="comment-postid" value="<?php echo $post_id; ?>" />
                         <button style="margin-left:5px;" class="primary_btn" type="submit"><i class="fa-solid fa-arrow-right-to-bracket"></i></button>

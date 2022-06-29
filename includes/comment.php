@@ -14,7 +14,11 @@ if ($comments) {
     if (isset($_GET['single-post-id'])) {
         header("location: ../single.php?post-id=".$post_id);
     } else {
-        header('location: ../home.php?result=comment-successful');
+        if (isset($_GET['profile'])) {
+            header('location: ../profile.php?result=comment-successful');
+        } else {
+            header('location: ../home.php?result=comment-successful');
+        }
     }
 
 }
