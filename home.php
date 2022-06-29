@@ -29,8 +29,11 @@ $login_user_pic = $_SESSION['image'];
                         <p><?php echo $post['post_date'] ?></p>
                     </div>
                 </div>
-                    <img src="img/post/<?php echo $post['post_image'] ?>"
-                    alt="<?php echo $post['post_title'] ?>">
+                    <?php if($post['post_image']): ?>
+                    <img src="img/post/<?php echo $post['post_image'] ?>" alt="<?php echo $post['post_title'] ?>">
+                    <?php else: ?>
+                        <img src="img/code-blog.jpg" alt="Code Blog">
+                    <?php endif; ?>
                     <h2 class="title"><?php echo $post['post_title'] ?></h2>
                     <p class='slice'><?php echo $post['post_content'] ?></p>
                     <a href="single.php?post-id=<?php echo $post_id; ?>" class="primary_btn">Read more</a>

@@ -28,7 +28,11 @@ $login_user_pic = $_SESSION['image'];
                     </div>
                 </div>
                 <h1 class="title"><?php echo $post['post_title']; ?></h1>
-                <img src="img/post/<?php echo $post['post_image'] ?>" alt="<?php echo $post['post_title']; ?>">
+                <?php if($post['post_image']): ?>
+                    <img src="img/post/<?php echo $post['post_image'] ?>" alt="<?php echo $post['post_title'] ?>">
+                <?php else: ?>
+                    <img src="img/code-blog.jpg" alt="Code Blog">
+                <?php endif; ?>
                 <p><?php echo $post['post_content']; ?></p>
                 <div class="comment-form flex align-items-center">
                     <img class="autor-img" src="./img/<?php echo $login_user_pic; ?>" alt="<?php echo $full_name; ?>">
