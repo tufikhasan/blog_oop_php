@@ -23,7 +23,11 @@ $login_user_pic = $_SESSION['image'];
             ?>
             <div class="post">
                 <div class="autor-info flex align-items-center">
-                    <img class="autor-img" src="./img/<?php echo $post['user_picture'] ?>" alt="<?php echo $post['user_name'] ?>">
+                    <?php if($post['user_picture']): ?>
+                        <img class="autor-img" src="./img/<?php echo $post['user_picture'] ?>" alt="<?php echo $post['user_name'] ?>">
+                    <?php else: ?>
+                        <img class="autor-img" src="./img/avatar.png" alt="<?php echo $post['user_name'] ?>">
+                    <?php endif; ?>
                     <div>
                         <h4 class="author-title"><span class="author-title"><?php echo $post['user_name'] ?></span></h4>
                         <p><?php echo $post['post_date'] ?></p>
@@ -38,7 +42,11 @@ $login_user_pic = $_SESSION['image'];
                     <p class='slice'><?php echo $post['post_content'] ?></p>
                     <a href="single.php?post-id=<?php echo $post_id; ?>" class="primary_btn">Read more</a>
                 <div class="comment-form flex align-items-center">
-                    <img class="autor-img" src="./img/<?php echo $login_user_pic; ?>" alt="<?php echo $full_name; ?>">
+                    <?php if($login_user_pic): ?>
+                        <img class="autor-img" src="./img/<?php echo $login_user_pic ?>" alt="<?php echo $full_name ?>">
+                    <?php else: ?>
+                        <img class="autor-img" src="./img/avatar.png" alt="<?php echo $full_name ?>">
+                    <?php endif; ?>
                     <form class="flex" style="width: 100%" action="includes/comment.php" method="POST">
                         <input type="text" name="comment" placeholder="Leave a comment" style="width: 100%" required>
                         <input type="hidden" name="comment-postid" value="<?php echo $post_id; ?>" />
@@ -52,7 +60,11 @@ $login_user_pic = $_SESSION['image'];
                 if($comment_num > 0):
                 while ($comm_fetch = mysqli_fetch_array($all_comment) ): ?>
                 <div class="comments flex align-items-center">
-                    <img class="autor-img" src="./img/<?php echo $comm_fetch['user_pic']; ?>" alt="<?php echo $comm_fetch['user_name']; ?>">
+                    <?php if($comm_fetch['user_pic']): ?>
+                        <img class="autor-img" src="./img/<?php echo $comm_fetch['user_pic'] ?>" alt="<?php echo $comm_fetch['user_name'] ?>">
+                    <?php else: ?>
+                        <img class="autor-img" src="./img/avatar.png" alt="<?php echo $comm_fetch['user_name'] ?>">
+                    <?php endif; ?>
                     <div>
                         <h4 class="author-title"><span><?php echo $comm_fetch['user_name']; ?></span></h4>
                         <p><?php echo $comm_fetch['comment']; ?></p>

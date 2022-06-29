@@ -22,8 +22,13 @@
             </div>
             <div class="flex align-items-center">
                 <div class="avatar">
-                    <a href="profile.php"><img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="<?php echo $_SESSION['first'] ?>"><span
-                            class="author-title">Profile</span></a>
+                    <a href="profile.php">
+                    <?php if($_SESSION['image']): ?>
+                        <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="<?php echo $_SESSION['first'] ?>">
+                    <?php else: ?>
+                        <img class="autor-img" src="./img/avatar.png" alt="<?php echo $_SESSION['first'] ?>">
+                    <?php endif; ?>
+                    <span class="author-title">Profile</span></a>
                 </div>
                 <ul class="main-menu flex">
                     <li><a href="home.php">Home</a></li>
