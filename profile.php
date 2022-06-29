@@ -96,6 +96,12 @@ $login_user_pic = $_SESSION['image'];
                 </form>
             </div>
             <hr />
+            <h3 class="title" style="margin: 1rem 0;">Comments -
+                    <?php $comments_count = mysqli_query($conn,"SELECT COUNT(id) FROM user_comment  WHERE comment_post_id='$post_id'"); 
+                        $row = $comments_count->fetch_row();
+                        echo '<span>('.$row[0].')</span>'; 
+                    ?>
+            </h3>
             <?php
                 $all_comment = mysqli_query($conn,"SELECT * FROM user_comment WHERE comment_post_id='$post_id' ORDER BY id DESC");
                 $comment_num = mysqli_num_rows($all_comment);
@@ -108,9 +114,9 @@ $login_user_pic = $_SESSION['image'];
                         <img class="autor-img" src="./img/avatar.png" alt="<?php echo $comm_fetch['user_name'] ?>">
                     <?php endif; ?>
                 <div>
-                    <h4 class="author-title"><span>
+                    <h5 class="title"><span>
                             <?php echo $comm_fetch['user_name']; ?>
-                        </span></h4>
+                        </span></h5>
                     <p>
                         <?php echo $comm_fetch['comment']; ?>
                     </p>
@@ -119,7 +125,7 @@ $login_user_pic = $_SESSION['image'];
             <?php endwhile; ?>
             <?php else: ?>
             <div class="comments flex align-items-center justify-content-center">
-                <h4 class="author-title">No comments have been posted yet</h4>
+                <h5 class="title">No comments have been posted yet</h5>
             </div>
             <?php endif; ?>
         </div>

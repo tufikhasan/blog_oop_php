@@ -50,7 +50,12 @@ $login_user_pic = $_SESSION['image'];
                         <button style="margin-left:5px;" class="primary_btn" type="submit"><i class="fa-solid fa-arrow-right-to-bracket"></i></button>
                     </form>
                 </div>
-                <h3 class="title" style="margin: 1rem 0;">ALL Comments</h3>
+                <h3 class="title" style="margin: 1rem 0;">Comments -
+                    <?php $comments_count = mysqli_query($conn,"SELECT COUNT(id) FROM user_comment  WHERE comment_post_id='$post_id'"); 
+                        $row = $comments_count->fetch_row();
+                        echo '<span>('.$row[0].')</span>'; 
+                    ?>
+                </h3>
                 <?php $all_comments = mysqli_query($conn,"SELECT * FROM user_comment WHERE comment_post_id='$post_id'");
                 $comment_num = mysqli_num_rows($all_comments);
                 if($comment_num > 0): 
@@ -63,14 +68,14 @@ $login_user_pic = $_SESSION['image'];
                         <img class="autor-img" src="./img/avatar.png" alt="<?php echo $comment['user_name'] ?>">
                     <?php endif; ?>
                     <div>
-                        <h4 class="author-title"><span><?php echo $comment['user_name']; ?></span></h4>
+                        <h5 class="title"><span><?php echo $comment['user_name']; ?></span></h5>
                         <p><?php echo $comment['comment']; ?></p>
                     </div>
                 </div>
                 <?php endwhile; ?>
                 <?php else: ?>
                     <div class="comments flex align-items-center justify-content-center">
-                        <h4 class="author-title">No comments have been posted yet</h4>
+                        <h5 class="title">No comments have been posted yet</h5>
                     </div>
                 <?php endif; ?>
             </div>
