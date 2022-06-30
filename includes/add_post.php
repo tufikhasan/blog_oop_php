@@ -26,13 +26,19 @@
 	move_uploaded_file($post_tmp_n,'../img/post/'.$post_image);
 	
 	if($postcont || $post_image ){
-		
-		mysqli_query($conn,'INSERT INTO user_post(user_name,user_email,user_picture,post_date,post_title,post_content,post_image) VALUES("'.$user_nam.'","'.$user_email_address.'","'.$user_pic.'","'.$postdate.'","'.$posttitle.'","'.$postcont.'","'.$post_image.'")');
+		try{
+			$query = 'INSERT INTO user_post(user_name,user_email,user_picture,post_date,post_title,post_content,post_image) VALUES("'.$user_nam.'","'.$user_email_address.'","'.$user_pic.'","'.$postdate.'","'.$posttitle.'","'.$postcont.'","'.$post_image.'")';
+			
+			mysqli_query($conn,$query);
 
-		if (isset($_GET['profile'])) {
-			header('location: ../profile.php?result=post-added-successful');
-		} else {
-			header('location: ../home.php?result=post-added-successful');
+			if (isset($_GET['profile'])) {
+				header('location: ../profile.php?result=post-added-successful');
+			} else {
+				header('location: ../home.php?result=post-added-successful');
+			}
+		}catch (mysqli_sql_exception $e) {
+			var_dump($e);
+      		exit; 
 		}
 		
 	}else{
