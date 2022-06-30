@@ -25,7 +25,7 @@ if ($firstname || $lastname || $email_address || $re_email_address || $birthday 
         if ($user_email_index == 1) {
             header('location: ../index.php?result=exist');
         } else {
-            mysqli_query($conn,"INSERT INTO user_info(firstname,lastname,email,birthday,profile_picture,gender,user_password) VALUES('$firstname','$lastname','$email_address','$birthday','$profile_picture','$gender','$password')");
+            mysqli_query($conn,"INSERT INTO user_info(`firstname`,`lastname`,`email`,`birthday`,`profile_picture`,`gender`,`user_password`) VALUES('$firstname','$lastname','$email_address','$birthday','$profile_picture','$gender','$password')");
                     header('location: ../login.php?result=successful');
         }
     } else {

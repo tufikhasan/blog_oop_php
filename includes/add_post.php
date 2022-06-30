@@ -27,7 +27,7 @@
 	
 	if($postcont || $post_image ){
 		try{
-			$query = 'INSERT INTO user_post(user_name,user_email,user_picture,post_date,post_title,post_content,post_image) VALUES("'.$user_nam.'","'.$user_email_address.'","'.$user_pic.'","'.$postdate.'","'.$posttitle.'","'.$postcont.'","'.$post_image.'")';
+			$query = 'INSERT INTO user_post(`user_name`,`user_email`,`user_picture`,`post_date`,`post_title`,`post_content`,`post_image`) VALUES("'.$user_nam.'","'.$user_email_address.'","'.$user_pic.'","'.$postdate.'","'.$posttitle.'","'.$postcont.'","'.$post_image.'")';
 			
 			mysqli_query($conn,$query);
 
