@@ -14,9 +14,9 @@
 	
 	$postdate = date('F d, Y h:i a');
 	
-	$posttitle = $_POST['postTitle'];
+	$posttitle = $conn->real_escape_string($_POST['postTitle']);
 
-    $postcont = $_POST['postcont'];
+    $postcont = $conn->real_escape_string($_POST['postcont']);
 	
 	$post_image = $_FILES['post_ima']['name'];
 	
