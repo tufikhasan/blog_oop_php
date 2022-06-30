@@ -7,6 +7,8 @@
 	date_default_timezone_set('Asia/Dhaka');
 	
 	$user_nam = $_SESSION['first'].' '.$_SESSION['last'];
+
+	$user_email_address = $_SESSION['email'];
 	
 	$user_pic = $_SESSION['image'];
 	
@@ -25,7 +27,7 @@
 	
 	if($postcont || $post_image ){
 		
-		mysqli_query($conn,"INSERT INTO user_post(user_name,user_picture,post_date,post_title,post_content,post_image) VALUES('$user_nam','$user_pic','$postdate','$posttitle','$postcont','$post_image')");
+		mysqli_query($conn,"INSERT INTO user_post(user_name,user_email,user_picture,post_date,post_title,post_content,post_image) VALUES('$user_nam','$user_email_address','$user_pic','$postdate','$posttitle','$postcont','$post_image')");
 
 		if (isset($_GET['profile'])) {
 			header('location: ../profile.php?result=post-added-successful');

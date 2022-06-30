@@ -17,6 +17,7 @@
 		$_SESSION['first'] = $user_tukra['firstname'];
 		$_SESSION['last'] = $user_tukra['lastname'];
 		$_SESSION['image'] = $user_tukra['profile_picture'];
+		$_SESSION['email'] = $user_tukra['email'];
 		header('location: ../home.php');
 	}else{
         header('location: ../login.php?result=wrong-credentials');

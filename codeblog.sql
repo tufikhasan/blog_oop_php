@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 28, 2022 at 06:46 AM
+-- Generation Time: Jun 30, 2022 at 10:34 AM
 -- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -53,13 +53,6 @@ CREATE TABLE `user_info` (
   `reg_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `user_info`
---
-
-INSERT INTO `user_info` (`id`, `firstname`, `lastname`, `email`, `birthday`, `profile_picture`, `gender`, `user_password`, `reg_date`) VALUES
-(15, 'Nadim', 'hasan', 'admin@gmail.com', '1997-12-05', 'profile.png', 'on', '827ccb0eea8a706c4c34a16891f84e7b', '2022-06-28 04:44:22');
-
 -- --------------------------------------------------------
 
 --
@@ -67,13 +60,14 @@ INSERT INTO `user_info` (`id`, `firstname`, `lastname`, `email`, `birthday`, `pr
 --
 
 CREATE TABLE `user_post` (
-  `id` int(11) NOT NULL,
-  `user_name` varchar(32) NOT NULL,
+  `id` int(6) UNSIGNED NOT NULL,
+  `user_name` varchar(30) NOT NULL,
+  `user_email` varchar(30) NOT NULL,
   `user_picture` varchar(255) NOT NULL,
-  `post_date` varchar(100) NOT NULL,
-  `post_title` varchar(255) NOT NULL,
-  `post_content` varchar(500) NOT NULL,
-  `post_image` varchar(400) NOT NULL
+  `post_date` varchar(50) DEFAULT NULL,
+  `post_title` varchar(255) DEFAULT NULL,
+  `post_content` varchar(1000) DEFAULT NULL,
+  `post_image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -106,19 +100,19 @@ ALTER TABLE `user_post`
 -- AUTO_INCREMENT for table `user_comment`
 --
 ALTER TABLE `user_comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `user_info`
 --
 ALTER TABLE `user_info`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `user_post`
 --
 ALTER TABLE `user_post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

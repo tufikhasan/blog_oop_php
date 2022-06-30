@@ -7,6 +7,7 @@ if(!isset($_SESSION['first'])){
 include('./template-part/main_header.php') ;
 $full_name = $_SESSION['first'].' '.$_SESSION['last'];
 $login_user_pic = $_SESSION['image'];
+$login_user_email = $_SESSION['email'];
 ?>
 <!---Add post section start--->
 <button class="primary_btn add_post_form_open_btn">&plus;</button>
@@ -43,7 +44,7 @@ $login_user_pic = $_SESSION['image'];
 <section>
     <div class="main-content flex justify-content-center post-area">
         <?php
-            $all_post = mysqli_query($conn,"SELECT * FROM user_post WHERE user_name='$full_name' ORDER BY id DESC");
+            $all_post = mysqli_query($conn,"SELECT * FROM user_post WHERE user_email='$login_user_email' ORDER BY id DESC");
             $post_num = mysqli_num_rows($all_post);
             if($post_num > 0):
             while ($post = mysqli_fetch_array($all_post)):
