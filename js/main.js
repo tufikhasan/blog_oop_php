@@ -63,6 +63,10 @@ function changeColor() {
     }
   });
 }
+//checkink if 'çolor' key exists
+if (localStorage.getItem('color') !== null) {
+  changeColor();
+}
 
 /* ----theme light and dark mode ----------------------*/
 const dayNight = document.querySelector('.day-night');

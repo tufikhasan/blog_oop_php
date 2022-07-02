@@ -17,3 +17,6 @@
 <!---Alert system start--->
 <?php include('alert.php'); ?>
 <!---Alert system end--->
+<!---style_switcher system start--->
+<?php include('style_switcher.php'); ?>
+<!---style_switcher system end--->
