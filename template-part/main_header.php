@@ -18,7 +18,7 @@
     <title>Code Blog | Home</title>
 </head>
 
-<body>
+<body class="dark">
     <!---Header area start--->
     <header class="header-area">
         <div class="main-content flex align-items-center justify-content-space-between">

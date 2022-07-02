@@ -6,3 +6,9 @@
   --gray-text: #878f99;
   --primary-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
 }
+body.dark {
+  --primary-bg: #2c333a;
+  --secondary-bg: #232728;
+  --white-text: rgb(11, 11, 11);
+  --black-text: #eeefef;
+}
