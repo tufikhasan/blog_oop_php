@@ -8,7 +8,7 @@ include('./template-part/header.php') ?>
 <section class="main-content">
     <div class="form-area flex align-items-center justify-content-center">
         <form action="includes/register.php" method="POST" enctype="multipart/form-data">
-            <h2>Create a new account</h2>
+            <h2 class="title">Create a new account</h2>
             <div class="input-box flex justify-content-space-between">
                 <div style="width:49%">
                     <label for="first_name">First Name <span>*</span></label>

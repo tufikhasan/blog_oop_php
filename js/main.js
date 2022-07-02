@@ -21,7 +21,7 @@
     });
   });
 })(jQuery);
-
+/* ----Add or remove active class selected Menu item  ---------------*/
 (() => {
   const currentLocaton = location.href;
   const menuItem = document.querySelectorAll('.main-menu a');

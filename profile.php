@@ -137,4 +137,4 @@ $login_user_email = $_SESSION['email'];
     </div>
 </section>
 <!---profile main section end--->
-<?php include('./template-part/main_footer.php') ?>
+<?php include('./template-part/footer.php') ?>

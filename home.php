@@ -90,4 +90,4 @@ $login_user_pic = $_SESSION['image'];
         </div>
     </section>
     <!---Home main section end--->
-<?php include('./template-part/main_footer.php') ?>
+<?php include('./template-part/footer.php') ?>

@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="HTML, CSS, JavaScript, Blog, Code, Php">
-    <meta name="description" content="This is a coder bloging website">
-    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-    <link rel="stylesheet" href="css/style.css">
-    <title>Code Blog</title>
-</head>
-
-<body>
+<?php include('head.php'); ?>
+<body class="dark">
     <!---Header area start--->
     <header class="header-area">
         <div class="main-content flex align-items-center justify-content-space-between">

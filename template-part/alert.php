@@ -27,38 +27,3 @@
 	}
 ?>
 </div>
-<style>
-.alert-message{
-  width: fit-content;
-  position: fixed;
-  top: 100px;
-  left: 1.5rem;
-  z-index: 1;
-}
-.alert-message span{
-  padding: 10px;
-  text-align: center;
-  font-size: 0.8rem;
-  color: white;
-  background: #27ae60;
-  font-weight: bold;
-  border-radius: 10px;
-}
-.alert-message span.danger{
-	background:#d63031
-}
-.hide-alert {
-  -webkit-animation: hideAlert 3s forwards;
-  animation: hideAlert 3s forwards;
-}
-@keyframes hideAlert {
-    0% {opacity: 1;}
-    90% {opacity: 1;}
-    100% {opacity: 0;}
-}
-@-webkit-keyframes hideAlert {
-    0% {opacity: 1;}
-    90% {opacity: 1;}
-    100% {opacity: 0;}
-}
-</style>

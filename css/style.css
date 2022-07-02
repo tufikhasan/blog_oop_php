@@ -46,7 +46,7 @@
 }
 .main-menu a:hover,
 .main-menu a.active {
-  color: var(--white-text);
+  color: white;
   background-color: var(--primary-text);
 }
 .main-menu a:hover::after,
@@ -84,7 +84,7 @@ button.add_post_form_close_btn {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 1;
+  z-index: 102;
   background-color: rgba(252, 236, 236, 1);
   display: none;
 }
@@ -101,7 +101,6 @@ button.add_post_form_close_btn {
   padding: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 10px;
-  z-index: -1;
 }
 .autor-info {
   margin-bottom: 1rem;
@@ -124,11 +123,10 @@ button.add_post_form_close_btn {
 .post > h2 {
   font-size: 1.2rem;
   margin: 0.5rem 0;
-  color: var(--black-text);
 }
 .post > p {
   font-size: 0.9rem;
-  color: var(--black-text);
+  color: var(--gray-text);
   margin-bottom: 1rem;
 }
 .comment-form {
@@ -174,10 +172,11 @@ button.add_post_form_close_btn {
 }
 /*-------Footer style----------*/
 .footer-area {
-  background-color: var(--black-text);
-  color: var(--white-text);
+  color: white;
   font-size: 0.8rem;
   padding: 1.6rem;
+  box-shadow: var(--primary-shadow);
+  background-color: #2c333a;
 }
 .footer-area span {
   color: var(--primary-text);
@@ -214,68 +213,4 @@ button.add_post_form_close_btn {
   .single-post {
     width: 100%;
   }
-}
-/* style_switcher system start---*/
-.style-switcher {
-  position: fixed;
-  right: 0;
-  top: 80px;
-  padding: 15px;
-  width: 200px;
-  z-index: 101;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  transform: translateX(100%);
-}
-.style-switcher.open {
-  transform: translateX(-15px);
-}
-.style-switcher .s-icon {
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  font-size: 20px;
-  color: var(--black-text);
-  cursor: pointer;
-  border-radius: 50%;
-  right: 100%;
-  margin-right: 15px;
-}
-.style-switcher .s-icon:after {
-  border-radius: 50%;
-}
-.style-switcher .s-icon i {
-  line-height: 40px;
-}
-.style-switcher .style-switcher-toggler {
-  top: 0;
-}
-.style-switcher .day-night {
-  top: 55px;
-}
-.style-switcher h4 {
-  margin: 0 0 10px;
-  color: var(--black-text);
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: capitalize;
-}
-.style-switcher .colors {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.style-switcher .colors span {
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-.style-switcher .color-1 {
-  background-color: #fb839e;
-}
-.style-switcher .color-2 {
-  background-color: #ec9412;
 }

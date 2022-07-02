@@ -1,6 +1,5 @@
 :root {
   --primary-bg: #fff;
-  --secondary-bg: #ecf0f1;
   --white-text: #fff;
   --black-text: #2c333a;
   --gray-text: #878f99;
@@ -8,7 +7,6 @@
 }
 body.dark {
   --primary-bg: #2c333a;
-  --secondary-bg: #232728;
-  --white-text: rgb(11, 11, 11);
-  --black-text: #eeefef;
+  --white-text: rgb(44, 42, 42);
+  --black-text: #f6f6f6;
 }

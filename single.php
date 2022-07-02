@@ -81,4 +81,4 @@ $login_user_pic = $_SESSION['image'];
             </div>
             <?php endwhile; ?>
     </section>
-<?php include('./template-part/main_footer.php') ?>
+<?php include('./template-part/footer.php') ?>

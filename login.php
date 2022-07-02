@@ -9,7 +9,7 @@ include('./template-part/header.php') ?>
 <section class="main-content">
     <div class="form-area flex align-items-center justify-content-center">
         <form action="includes/log_in.php" method="POST">
-            <h2>Login your account</h2>
+            <h2 class="title">Login your account</h2>
             <div class="input-box">
                 <label for="email_address">Enter e-mail address <span>*</span></label>
                 <input type="email" name="user-email" id="email_address" placeholder="Enter your e-mail"
