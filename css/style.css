@@ -39,14 +39,26 @@
 .main-menu a {
   padding: 0.4rem 0.7rem;
   transition: all 0.4s ease-in-out;
+  position: relative;
 }
-.main-menu a:hover,
 .author-title:hover {
   color: rgb(9, 123, 108);
 }
+.main-menu a:hover,
 .main-menu a.active {
   color: var(--white-text);
   background-color: var(--primary-text);
+}
+.main-menu a:hover::after,
+.main-menu a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: calc(50% - 5px);
+  border-width: 5px 5px 0;
+  border-style: solid;
+  border-color: var(--primary-text) transparent;
+  display: block;
 }
 /*-------Add post-section style----------*/
 button.add_post_form_open_btn {
