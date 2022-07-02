@@ -21,3 +21,15 @@
     });
   });
 })(jQuery);
+
+(() => {
+  const currentLocaton = location.href;
+  const menuItem = document.querySelectorAll('.main-menu a');
+  const menuLength = menuItem.length;
+
+  for (let index = 0; index < menuLength; index++) {
+    if (menuItem[index].href === currentLocaton) {
+      menuItem[index].className = 'active';
+    }
+  }
+})();

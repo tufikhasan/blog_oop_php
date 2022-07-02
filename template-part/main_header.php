@@ -21,16 +21,12 @@
                 <a href="index.php"><img src="./img/logo.png" alt="Logo" width="120px"></a>
             </div>
             <div class="flex align-items-center">
-                <div class="avatar">
-                    <a href="profile.php">
-                    <?php if($_SESSION['image']): ?>
+                <ul class="main-menu flex align-items-center">
+                    <li><?php if($_SESSION['image']): ?>
                         <img class="autor-img" src="./img/<?php echo $_SESSION['image'] ?>" alt="<?php echo $_SESSION['first'] ?>">
                     <?php else: ?>
                         <img class="autor-img" src="./img/avatar.png" alt="<?php echo $_SESSION['first'] ?>">
-                    <?php endif; ?>
-                    <span class="author-title">Profile</span></a>
-                </div>
-                <ul class="main-menu flex">
+                    <?php endif; ?><a href="profile.php">Profile</a></li>
                     <li><a href="home.php">Home</a></li>
                     <li><a href="./includes/logout.php">Log out</a></li>
                 </ul>

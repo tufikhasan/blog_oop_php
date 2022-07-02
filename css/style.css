@@ -36,9 +36,17 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+.main-menu a {
+  padding: 0.4rem 0.7rem;
+  transition: all 0.4s ease-in-out;
+}
 .main-menu a:hover,
 .author-title:hover {
   color: rgb(9, 123, 108);
+}
+.main-menu a.active {
+  color: var(--white-text);
+  background-color: var(--primary-text);
 }
 /*-------Add post-section style----------*/
 button.add_post_form_open_btn {
@@ -81,6 +89,7 @@ button.add_post_form_close_btn {
   padding: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 10px;
+  z-index: -1;
 }
 .autor-info {
   margin-bottom: 1rem;
@@ -180,9 +189,6 @@ button.add_post_form_close_btn {
   .main-menu li:last-child {
     border-bottom: none;
     padding: 0.3rem 0 0;
-  }
-  .avatar span {
-    display: none;
   }
 }
 @media screen and (min-width: 900px) {
