@@ -24,4 +24,4 @@ if(isset($_GET['update'])){
         header('location: ../profile.php?result=post-update-successfully');		
 	}
 }	
-?>
+
