@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Blog, Code, Php">
+    <meta name="description" content="This is a coder bloging website">
+    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <!--default colour skin css file-->
+    <link rel="stylesheet" href="css/skins/color-1.css">
+    <!--style switcher - for demo purposes only-->
+    <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+    <title>Code Blog</title>
+</head>
+
+<body class="dark">
+    <!---Header area start--->
+    <header class="header-area">
+        <div class="main-content flex align-items-center justify-content-space-between">
+            <div class="logo-area">
+                <a href="index.html"><img src="./img/logo.png" alt="Logo" width="120px"></a>
+            </div>
+            <div class="flex align-items-center">
+                <ul class="main-menu flex align-items-center">
+                    <li>
+                        <img class="autor-img" src="./img/avatar.png" alt="Profile"><a href="#profile">Profile</a>
+                    </li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#logout">Log out</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <button class="menu-bar primary_btn">&#9776;</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--style switcher start  -  for demo purposes only -->
+    <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon">
+            <i class="fas"></i>
+        </div>
+        <h4>Theme Colors</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+        </div>
+    </div>
+    <!--style switcher end   -->
+    <!---Add post section start--->
+    <button class="primary_btn add_post_form_open_btn">&plus;</button>
+    <section class="add-post-form-area">
+        <button class="primary_btn add_post_form_close_btn">&cross;</button>
+        <div class="main-content">
+            <div class="form-area flex align-items-center justify-content-center" style="height: 100vh;">
+                <form action="">
+                    <h2>Create a new post your</h2>
+                    <div class="input-box">
+                        <label for="postTitle">Post title</label>
+                        <input type="text" name="postTitle" id="postTitle" placeholder="Enter post title"
+                            style="width: 100%">
+                    </div>
+                    <div class="input-box">
+                        <label for="post-desc">Post Description</label>
+                        <textarea name="postcont" id="post-desc" cols="30" rows="10" style="width: 100%"
+                            placeholder="Enter post Description"></textarea>
+                    </div>
+                    <div class="input-box">
+                        <label for="post-img">Post image</label>
+                        <input type="file" id="post-img" style="width: 100%" name="post_ima" />
+                    </div>
+                    <div class=" flex justify-content-space-between">
+                        <input class="primary_btn" type="submit" value="Add new post" />
+                        <button class="primary_btn" type="reset">&circlearrowright;</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!---Add post section end--->
+    <!---Home main section start--->
+    <section>
+        <div class="main-content flex justify-content-center post-area">
+            <div class="post">
+                <div class="autor-info flex">
+                    <img class="autor-img" src="./img/avatar.png" alt="Towfik">
+                    <div>
+                        <h4 class="author-title"><span class="author-title">Towfik Hasan</span></h4>
+                        <p>July 05, 2022 10:21 am</p>
+                    </div>
+                </div>
+                <img src="img/post (1).jpg" alt="Code Blog">
+                <h2 class="title">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <p class='slice'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores cumque, placeat hic
+                    quidem molestias quas quos unde. Culpa praesentium temporibus enim omnis quis, eos nemo error,
+                    neque, ea nihil architecto.</p>
+                <a href="" class="primary_btn">Read more</a>
+                <div class="comment-form flex align-items-center">
+                    <img class="autor-img" src="./img/avatar.png" alt="Avatar">
+                    <form class="flex" style="width: 100%">
+                        <input type="text" name="comment" placeholder="Leave a comment" style="width: 100%" required>
+                        <button style="margin-left:5px;" class="primary_btn" type="submit"><i
+                                class="fa-solid fa-arrow-right-to-bracket"></i></button>
+                    </form>
+                </div>
+                <hr />
+                <h3 class="title" style="margin: 1rem 0;">Comments - <span>(1)</span></h3>
+                <div class="comments flex align-items-center">
+                    <img class="autor-img" src="./img/avatar.png" alt="Tufik">
+                    <div>
+                        <h5 class="title"><span>Tufik Hasan</span></h5>
+                        <p>lorem eos nemo error, neque, ea nihil architecto.</p>
+                    </div>
+                </div>
+                <div class="comments flex align-items-center justify-content-center">
+                    <h5 class="title">No comments have been posted yet</h5>
+                </div>
+            </div>
+            <div class="post">
+                <div class="autor-info flex">
+                    <img class="autor-img" src="./img/avatar.png" alt="Towfik">
+                    <div>
+                        <h4 class="author-title"><span class="author-title">Towfik Hasan</span></h4>
+                        <p>July 05, 2022 10:21 am</p>
+                    </div>
+                </div>
+                <img src="img/post (1).jpg" alt="Code Blog">
+                <h2 class="title">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <p class='slice'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores cumque, placeat hic
+                    quidem molestias quas quos unde. Culpa praesentium temporibus enim omnis quis, eos nemo error,
+                    neque, ea nihil architecto.</p>
+                <a href="" class="primary_btn">Read more</a>
+                <div class="comment-form flex align-items-center">
+                    <img class="autor-img" src="./img/avatar.png" alt="Avatar">
+                    <form class="flex" style="width: 100%">
+                        <input type="text" name="comment" placeholder="Leave a comment" style="width: 100%" required>
+                        <button style="margin-left:5px;" class="primary_btn" type="submit"><i
+                                class="fa-solid fa-arrow-right-to-bracket"></i></button>
+                    </form>
+                </div>
+                <hr />
+                <h3 class="title" style="margin: 1rem 0;">Comments - <span>(1)</span></h3>
+                <div class="comments flex align-items-center">
+                    <img class="autor-img" src="./img/avatar.png" alt="Tufik">
+                    <div>
+                        <h5 class="title"><span>Tufik Hasan</span></h5>
+                        <p>lorem eos nemo error, neque, ea nihil architecto.</p>
+                    </div>
+                </div>
+                <div class="comments flex align-items-center justify-content-center">
+                    <h5 class="title">No comments have been posted yet</h5>
+                </div>
+            </div>
+            <div class="post">
+                <div class="autor-info flex">
+                    <img class="autor-img" src="./img/avatar.png" alt="Towfik">
+                    <div>
+                        <h4 class="author-title"><span class="author-title">Towfik Hasan</span></h4>
+                        <p>July 05, 2022 10:21 am</p>
+                    </div>
+                </div>
+                <img src="img/post (1).jpg" alt="Code Blog">
+                <h2 class="title">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <p class='slice'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores cumque, placeat hic
+                    quidem molestias quas quos unde. Culpa praesentium temporibus enim omnis quis, eos nemo error,
+                    neque, ea nihil architecto.</p>
+                <a href="" class="primary_btn">Read more</a>
+                <div class="comment-form flex align-items-center">
+                    <img class="autor-img" src="./img/avatar.png" alt="Avatar">
+                    <form class="flex" style="width: 100%">
+                        <input type="text" name="comment" placeholder="Leave a comment" style="width: 100%" required>
+                        <button style="margin-left:5px;" class="primary_btn" type="submit"><i
+                                class="fa-solid fa-arrow-right-to-bracket"></i></button>
+                    </form>
+                </div>
+                <hr />
+                <h3 class="title" style="margin: 1rem 0;">Comments - <span>(1)</span></h3>
+                <div class="comments flex align-items-center">
+                    <img class="autor-img" src="./img/avatar.png" alt="Tufik">
+                    <div>
+                        <h5 class="title"><span>Tufik Hasan</span></h5>
+                        <p>lorem eos nemo error, neque, ea nihil architecto.</p>
+                    </div>
+                </div>
+                <div class="comments flex align-items-center justify-content-center">
+                    <h5 class="title">No comments have been posted yet</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---Home main section end--->
+    <!---footer area start--->
+    <footer class="footer-area">
+        <div class="main-content flex align-items-center justify-content-center">
+            <p>All right reserved by <span>&copy;Tufik hasan</span> | 2022</p>
+        </div>
+    </footer>
+    <!---footer area end--->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
