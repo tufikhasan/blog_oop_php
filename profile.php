@@ -51,7 +51,7 @@ $login_user_email = $_SESSION['email'];
                 $post_id = $post['id'];
             ?>
         <div class="post">
-            <div class="autor-info flex align-items-center" style="position: relative;">
+            <div class="autor-info flex">
                     <?php if($post['user_picture']): ?>
                         <img class="autor-img" src="./img/<?php echo $post['user_picture'] ?>" alt="<?php echo $post['user_name'] ?>">
                     <?php else: ?>
@@ -65,7 +65,7 @@ $login_user_email = $_SESSION['email'];
                         <?php echo $post['post_date'] ?>
                     </p>
                 </div>
-                <div class="action-buttons">
+                <div class="action-buttons flex">
                     <a href="edit-form.php?edit=<?php echo $post_id; ?>"><i class="fa-solid fa-pen-to-square"></i></a>
                     <a href="includes/delete.php?delete=<?php echo $post_id; ?>"><i class="fa-solid fa-trash"></i></a>
                 </div>

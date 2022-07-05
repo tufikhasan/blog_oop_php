@@ -17,7 +17,7 @@ include('./template-part/main_header.php') ?>
 	while($post_tukra = mysqli_fetch_array($all_post)):
 	$post_id = $post_tukra['id']; ?>
         <form action="./includes/edit.php?update=<?php echo $post_id; ?>" method="POST" enctype="multipart/form-data">
-            <h2>Update your post</h2>
+            <h2 class="title">Update your post</h2>
             <div class="input-box">
                 <label for="edit-post-title">Post title</label>
                 <input type="text" name="edit-post-title" id="edit-post-title" placeholder="Enter post title" style="width: 100%" value="<?php echo $post_tukra['post_title']; ?>"/>
@@ -46,4 +46,4 @@ include('./template-part/main_header.php') ?>
 </section>
 <!---form area end--->
 <!---form section end--->
-<?php include('./template-part/main_footer.php') ?>
+<?php include('./template-part/footer.php') ?>

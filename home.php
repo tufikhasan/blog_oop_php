@@ -22,7 +22,7 @@ $login_user_pic = $_SESSION['image'];
                 $post_id = $post['id'];
             ?>
             <div class="post">
-                <div class="autor-info flex align-items-center">
+                <div class="autor-info flex">
                     <?php if($post['user_picture']): ?>
                         <img class="autor-img" src="./img/<?php echo $post['user_picture'] ?>" alt="<?php echo $post['user_name'] ?>">
                     <?php else: ?>

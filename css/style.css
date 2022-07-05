@@ -142,11 +142,9 @@ button.add_post_form_close_btn {
   margin-bottom: 1rem;
 }
 .action-buttons {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
+  flex: 50px;
+  justify-content: flex-end;
 }
 .action-buttons a i {
   color: var(--primary-text);
@@ -192,6 +190,7 @@ button.add_post_form_close_btn {
     width: 200px;
     padding: 1rem;
     box-shadow: var(--primary-shadow);
+    transition: 0.3s;
   }
   .main-menu li {
     padding: 0.3rem 0;
@@ -201,6 +200,9 @@ button.add_post_form_close_btn {
     width: 30px;
     height: 30px;
     margin-top: -5px;
+  }
+  .main-menu.open {
+    display: block;
   }
 }
 @media screen and (min-width: 900px) {

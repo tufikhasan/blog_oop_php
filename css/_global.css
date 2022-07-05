@@ -120,10 +120,10 @@ section {
   border-radius: 10px;
   border: none;
   border: 1px solid var(--gray-text);
-  color: var(--black-text);
 }
 .comment-form input {
   background-color: transparent;
+  color: var(--black-text);
 }
 .form-area form .input-box input:focus,
 .form-area form .input-box textarea:focus,
@@ -145,6 +145,7 @@ section {
   transition: all 0.3s ease;
   transform: translateX(100%);
   box-shadow: var(--primary-shadow);
+  background-color: var(--primary-bg);
 }
 .style-switcher.open {
   transform: translateX(-15px);
@@ -161,6 +162,7 @@ section {
   right: 100%;
   margin-right: 15px;
   box-shadow: var(--primary-shadow);
+  background-color: var(--primary-bg);
 }
 .style-switcher .s-icon i {
   line-height: 40px;
@@ -204,6 +206,11 @@ section {
 }
 .style-switcher .color-5 {
   background-color: #9c88ff;
+}
+@media screen and (max-width: 600px) {
+  .style-switcher {
+    top: 25vh;
+  }
 }
 /* Alert-message style start---*/
 .alert-message {
