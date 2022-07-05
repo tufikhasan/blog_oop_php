@@ -16,7 +16,7 @@
       var text = $(this).text(),
         length = text.length;
 
-      if (length > 95) return text.substr(0, 95) + ' ......';
+      if (length > 120) return text.substr(0, 120) + ' ......';
       else return text;
     });
   });

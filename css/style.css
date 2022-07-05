@@ -1,8 +1,3 @@
-/*import CSS _variables.css file*/
-@import url(./variables.css);
-/*import CSS _global.css file*/
-@import url(./_global.css);
-
 .header-area {
   padding: 1rem;
   box-shadow: var(--primary-shadow);
